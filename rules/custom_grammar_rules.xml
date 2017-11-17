@@ -1,0 +1,4519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rules [
+    <!ENTITY weekdays "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday">
+    <!ENTITY months "January|February|March|April|May|June|July|August|September|October|November|December">
+    <!ENTITY abbrevMonths "Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec">
+]>
+
+<rules lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <!-- ====================================================================== -->
+    <!-- Grammar -->
+    <!-- ====================================================================== -->
+    <category name="Grammar" type="grammar">
+	<rule id="theirusage" name="their usage">
+ <pattern>
+  <token postag='VBG|IN' postag_regexp='yes'></token>
+  <token>there</token>
+  <token postag='NN:UN|NNS' postag_regexp='yes'></token>
+ </pattern>
+ <message>Replace there with their</message>
+ <short>Replace there with their</short>
+ <example type='incorrect'>People are <marker>losing there concern</marker></example>
+ <example type='correct'>People are losing their concern</example>
+</rule>
+<rule id="1000" name="1000">
+ <pattern>
+ <token>one</token>
+<token>of</token>
+<token>the</token>
+<token>invaluable</token>
+<token>things</token>
+<token>among</token>
+<token>the</token>
+<token>people</token>
+ </pattern>
+<short>1000</short>
+<example type='incorrect'>one of <marker>the invaluable</marker> things among the people</example>
+</rule>
+<rule id="1001" name="1001">
+ <pattern>
+ <token>and</token>
+<token>the</token>
+<token>express</token>
+<token>that</token>
+<token>the</token>
+<token>opportunity</token>
+<token>comes</token>
+<token>once</token>
+<token>in</token>
+<token>the</token>
+<token>life</token>
+ </pattern>
+<short>1001</short>
+<example type='incorrect'>and <marker>the express</marker> that the opportunity comes once in the life</example>
+</rule>
+<rule id="1002" name="1002">
+ <pattern>
+ <token>important</token>
+<token>for</token>
+<token>do</token>
+<token>any</token>
+<token>work</token>
+ </pattern>
+<short>1002</short>
+<example type='incorrect'>important <marker>for do any</marker> work</example>
+</rule>
+<rule id="1003" name="1003">
+ <pattern>
+ <token>time</token>
+<token>and</token>
+<token>tide</token>
+<token>not</token>
+<token>wait</token>
+<token>for</token>
+<token>no</token>
+<token>one</token>
+ </pattern>
+<short>1003</short>
+<example type='incorrect'>time and <marker>tide not wait</marker> for no one</example>
+</rule>
+<rule id="1004" name="1004">
+ <pattern>
+ <token>It</token>
+<token>is</token>
+<token>necessary</token>
+<token>for</token>
+<token>complete</token>
+ </pattern>
+<short>1004</short>
+<example type='incorrect'>It is necessary <marker>for complete</marker></example>
+</rule>
+<rule id="1005" name="1005">
+ <pattern>
+ <token>time</token>
+<token>management</token>
+<token>person</token>
+<token>for</token>
+<token>complete</token>
+ </pattern>
+<short>1005</short>
+<example type='incorrect'><marker>time management person for complete</marker></example>
+</rule>
+<rule id="1006" name="1006">
+ <pattern>
+ <token>schools</token>
+<token>are</token>
+<token>train</token>
+<token>the</token>
+<token>students</token>
+ </pattern>
+<short>1006</short>
+<example type='incorrect'>schools <marker>are train</marker> the students</example>
+</rule>
+<rule id="1007" name="1007">
+ <pattern>
+ <token>training</token>
+<token>is</token>
+<token>an</token>
+<token>essential</token>
+<token>one</token>
+<token>to</token>
+<token>all</token>
+ </pattern>
+<short>1007</short>
+<example type='incorrect'>training is an <marker>essential one</marker> to all</example>
+</rule>
+<rule id="1008" name="1008">
+ <pattern>
+ <token>"</token>
+<token>Time</token>
+<token>and</token>
+<token>tide</token>
+<token>waits</token>
+<token>for</token>
+<token>no</token>
+<token>one"</token>
+ </pattern>
+<short>1008</short>
+<example type='incorrect'><marker>" Time</marker> and tide waits for no one"</example>
+</rule>
+<rule id="1009" name="1009">
+ <pattern>
+ <token>time</token>
+<token>is</token>
+<token>not</token>
+<token>wait</token>
+<token>for</token>
+<token>no</token>
+<token>person</token>
+ </pattern>
+<short>1009</short>
+<example type='incorrect'>time <marker>is not</marker> wait for no person</example>
+</rule>
+<rule id="1010" name="1010">
+ <pattern>
+ <token>the</token>
+<token>right</token>
+<token>time,</token>
+<token>we</token>
+<token>can</token>
+<token>success</token>
+<token>in</token>
+<token>life</token>
+ </pattern>
+<short>1010</short>
+<example type='incorrect'>the right time, <marker>we can</marker> success in life</example>
+</rule>
+<rule id="1011" name="1011">
+ <pattern>
+ <token>there</token>
+<token>are</token>
+<token>lot</token>
+<token>of</token>
+<token>peoples</token>
+<token>business</token>
+<token>peoples</token>
+<token>without</token>
+<token>time</token>
+<token>to</token>
+<token>eat</token>
+ </pattern>
+<short>1011</short>
+<example type='incorrect'>there are lot of <marker>peoples business peoples</marker> without time to eat</example>
+</rule>
+<rule id="1012" name="1012">
+ <pattern>
+ <token>among</token>
+<token>all</token>
+<token>the</token>
+<token>generation</token>
+<token>peoples</token>
+ </pattern>
+<short>1012</short>
+<example type='incorrect'>among all the <marker>generation peoples</marker></example>
+</rule>
+<rule id="1013" name="1013">
+ <pattern>
+ <token>as</token>
+<token>we</token>
+<token>all</token>
+<token>they</token>
+<token>know</token>
+<token>the</token>
+<token>story</token>
+ </pattern>
+<short>1013</short>
+<example type='incorrect'>as <marker>we all they</marker> know the story</example>
+</rule>
+<rule id="1014" name="1014">
+ <pattern>
+ <token>ki8nd</token>
+ </pattern>
+<short>1014</short>
+<example type='incorrect'><marker>ki8nd</marker></example>
+</rule>
+<rule id="1015" name="1015">
+ <pattern>
+ <token>finally</token>
+<token>the</token>
+<token>rabbit</token>
+<token>was</token>
+<token>lost</token>
+<token>in</token>
+<token>that</token>
+<token>game</token>
+ </pattern>
+<short>1015</short>
+<example type='incorrect'>finally the <marker>rabbit was lost</marker> in that game</example>
+</rule>
+<rule id="1016" name="1016">
+ <pattern>
+ <token>"</token>
+<token>SLOW</token>
+<token>AND</token>
+<token>WINS</token>
+<token>THE</token>
+<token>RACE</token>
+<token>"</token>
+ </pattern>
+<short>1016</short>
+<example type='incorrect'><marker>" SLOW</marker> AND WINS THE RACE "</example>
+</rule>
+<rule id="1017" name="1017">
+ <pattern>
+ <token>"</token>
+<token>SLOW</token>
+<token>AND</token>
+<token>WINS</token>
+<token>THE</token>
+<token>RACE</token>
+<token>"</token>
+ </pattern>
+<short>1017</short>
+<example type='incorrect'>" SLOW AND WINS THE <marker>RACE "</marker></example>
+</rule>
+<rule id="1018" name="1018">
+ <pattern>
+ <token>the</token>
+<token>apple</token>
+<token>to</token>
+<token>eat,</token>
+<token>that</token>
+<token>is</token>
+<token>my</token>
+<token>think</token>
+ </pattern>
+<short>1018</short>
+<example type='incorrect'>the apple to eat, <marker>that is my think</marker></example>
+</rule>
+<rule id="1019" name="1019">
+ <pattern>
+ <token>human</token>
+<token>being</token>
+<token>should</token>
+<token>be</token>
+<token>develop</token>
+<token>the</token>
+ </pattern>
+<short>1019</short>
+<example type='incorrect'>human being <marker>should be develop</marker> the</example>
+</rule>
+<rule id="1020" name="1020">
+ <pattern>
+ <token>our</token>
+<token>country</token>
+<token>there</token>
+<token>many</token>
+<token>people</token>
+ </pattern>
+<short>1020</short>
+<example type='incorrect'>our <marker>country there many</marker> people</example>
+</rule>
+<rule id="1021" name="1021">
+ <pattern>
+ <token>Every</token>
+<token>we</token>
+<token>face</token>
+<token>lot</token>
+<token>of</token>
+<token>problems</token>
+ </pattern>
+<short>1021</short>
+<example type='incorrect'><marker>Every we</marker> face lot of problems</example>
+</rule>
+<rule id="1022" name="1022">
+ <pattern>
+ <token>Later</token>
+<token>when</token>
+<token>rabbit</token>
+<token>waked</token>
+<token>up</token>
+ </pattern>
+<short>1022</short>
+<example type='incorrect'>Later when rabbit <marker>waked up</marker></example>
+</rule>
+<rule id="1023" name="1023">
+ <pattern>
+ <token>drop</token>
+<token>outs</token>
+<token>in</token>
+<token>their</token>
+ </pattern>
+<short>1023</short>
+<example type='incorrect'><marker>drop outs in their</marker></example>
+</rule>
+<rule id="1024" name="1024">
+ <pattern>
+ <token>can</token>
+<token>learn</token>
+<token>that</token>
+<token>practical</token>
+ </pattern>
+<short>1024</short>
+<example type='incorrect'><marker>can learn that practical</marker></example>
+</rule>
+<rule id="1025" name="1025">
+ <pattern>
+ <token>writing</token>
+<token>in</token>
+<token>the</token>
+<token>leaves</token>
+ </pattern>
+<short>1025</short>
+<example type='incorrect'><marker>writing in the leaves</marker></example>
+</rule>
+<rule id="1026" name="1026">
+ <pattern>
+ <token>they</token>
+<token>interested</token>
+ </pattern>
+<short>1026</short>
+<example type='incorrect'><marker>they interested</marker></example>
+</rule>
+<rule id="1027" name="1027">
+ <pattern>
+ <token>Yes,</token>
+<token>Book</token>
+<token>is</token>
+<token>an</token>
+<token>essential</token>
+<token>to</token>
+<token>modify</token>
+<token>our</token>
+<token>life</token>
+<token>style</token>
+ </pattern>
+<short>1027</short>
+<example type='incorrect'>Yes, <marker>Book</marker> is an essential to modify our life style</example>
+</rule>
+<rule id="1028" name="1028">
+ <pattern>
+ <token>classified</token>
+<token>by</token>
+<token>several</token>
+<token>types</token>
+ </pattern>
+<short>1028</short>
+<example type='incorrect'><marker>classified by several types</marker></example>
+</rule>
+<rule id="1029" name="1029">
+ <pattern>
+ <token>thinking</token>
+<token>as</token>
+<token>erased</token>
+ </pattern>
+<short>1029</short>
+<example type='incorrect'><marker>thinking as erased</marker></example>
+</rule>
+<rule id="1030" name="1030">
+ <pattern>
+ <token>there</token>
+<token>are</token>
+<token>many</token>
+<token>languages</token>
+<token>are</token>
+<token>available</token>
+ </pattern>
+<short>1030</short>
+<example type='incorrect'>there are many languages <marker>are available</marker></example>
+</rule>
+<rule id="1031" name="1031">
+ <pattern>
+ <token>about</token>
+<token>an</token>
+<token>important's</token>
+<token>of</token>
+<token>books</token>
+ </pattern>
+<short>1031</short>
+<example type='incorrect'><marker>about an important's</marker> of books</example>
+</rule>
+<rule id="1032" name="1032">
+ <pattern>
+ <token>In</token>
+<token>our</token>
+<token>forefathers</token>
+<token>using</token>
+ </pattern>
+<short>1032</short>
+<example type='incorrect'><marker>In our forefathers using</marker></example>
+</rule>
+<rule id="1033" name="1033">
+ <pattern>
+ <token>these</token>
+<token>all</token>
+<token>are</token>
+<token>note</token>
+<token>by</token>
+<token>our</token>
+<token>forefathers</token>
+ </pattern>
+<short>1033</short>
+<example type='incorrect'>these all <marker>are note by</marker> our forefathers</example>
+</rule>
+<rule id="1034" name="1034">
+ <pattern>
+ <token>learning</token>
+<token>the</token>
+<token>outside</token>
+<token>world</token>
+ </pattern>
+<short>1034</short>
+<example type='incorrect'><marker>learning the outside world</marker></example>
+</rule>
+<rule id="1035" name="1035">
+ <pattern>
+ <token>able</token>
+<token>to</token>
+<token>learning</token>
+ </pattern>
+<short>1035</short>
+<example type='incorrect'><marker>able to learning</marker></example>
+</rule>
+<rule id="1036" name="1036">
+ <pattern>
+ <token>many</token>
+<token>there</token>
+<token>are</token>
+ </pattern>
+<short>1036</short>
+<example type='incorrect'><marker>many there are</marker></example>
+</rule>
+<rule id="1037" name="1037">
+ <pattern>
+ <token>if</token>
+<token>they</token>
+<token>doing</token>
+ </pattern>
+<short>1037</short>
+<example type='incorrect'><marker>if they doing</marker></example>
+</rule>
+<rule id="1038" name="1038">
+ <pattern>
+ <token>there</token>
+<token>are</token>
+<token>many</token>
+<token>disadvantages</token>
+<token>are</token>
+<token>available</token>
+ </pattern>
+<short>1038</short>
+<example type='incorrect'>there are many disadvantages <marker>are available</marker></example>
+</rule>
+<rule id="1039" name="1039">
+ <pattern>
+ <token>murders</token>
+<token>were</token>
+<token>happened</token>
+ </pattern>
+<short>1039</short>
+<example type='incorrect'><marker>murders were happened</marker></example>
+</rule>
+<rule id="1040" name="1040">
+ <pattern>
+ <token>co-</token>
+<token>ed</token>
+ </pattern>
+<short>1040</short>
+<example type='incorrect'><marker>co- ed</marker></example>
+</rule>
+<rule id="1041" name="1041">
+ <pattern>
+ <token>in</token>
+<token>that</token>
+<token>why</token>
+ </pattern>
+<short>1041</short>
+<example type='incorrect'><marker>in that why</marker></example>
+</rule>
+<rule id="1042" name="1042">
+ <pattern>
+ <token>using</token>
+<token>for</token>
+<token>wrongly</token>
+ </pattern>
+<short>1042</short>
+<example type='incorrect'><marker>using for wrongly</marker></example>
+</rule>
+<rule id="1043" name="1043">
+ <pattern>
+ <token>was</token>
+<token>no</token>
+<token>this</token>
+<token>much</token>
+ </pattern>
+<short>1043</short>
+<example type='incorrect'><marker>was no this much</marker></example>
+</rule>
+<rule id="1044" name="1044">
+ <pattern>
+ <token>will</token>
+<token>become</token>
+<token>reduce</token>
+ </pattern>
+<short>1044</short>
+<example type='incorrect'><marker>will become reduce</marker></example>
+</rule>
+<rule id="1045" name="1045">
+ <pattern>
+ <token>will</token>
+<token>become</token>
+<token>increase</token>
+ </pattern>
+<short>1045</short>
+<example type='incorrect'><marker>will become increase</marker></example>
+</rule>
+<rule id="1046" name="1046">
+ <pattern>
+ <token>He/</token>
+<token>she</token>
+ </pattern>
+<short>1046</short>
+<example type='incorrect'><marker>He/ she</marker></example>
+</rule>
+<rule id="1047" name="1047">
+ <pattern>
+ <token>he/</token>
+<token>she</token>
+ </pattern>
+<short>1047</short>
+<example type='incorrect'><marker>he/ she</marker></example>
+</rule>
+<rule id="1048" name="1048">
+ <pattern>
+ <token>will</token>
+<token>not</token>
+<token>be</token>
+<token>the</token>
+<token>same</token>
+ </pattern>
+<short>1048</short>
+<example type='incorrect'>will not <marker>be the</marker> same</example>
+</rule>
+<rule id="1049" name="1049">
+ <pattern>
+ <token>that</token>
+<token>the</token>
+<token>green</token>
+<token>forest</token>
+ </pattern>
+<short>1049</short>
+<example type='incorrect'><marker>that the green forest</marker></example>
+</rule>
+<rule id="1050" name="1050">
+ <pattern>
+ <token>One</token>
+<token>of</token>
+<token>road</token>
+ </pattern>
+<short>1050</short>
+<example type='incorrect'><marker>One of road</marker></example>
+</rule>
+<rule id="1051" name="1051">
+ <pattern>
+ <token>some</token>
+<token>peoples</token>
+ </pattern>
+<short>1051</short>
+<example type='incorrect'><marker>some peoples</marker></example>
+</rule>
+<rule id="1052" name="1052">
+ <pattern>
+ <token>peoples</token>
+<token>didn't</token>
+ </pattern>
+<short>1052</short>
+<example type='incorrect'><marker>peoples didn't</marker></example>
+</rule>
+<rule id="1053" name="1053">
+ <pattern>
+ <token>way</token>
+<token>peoples</token>
+ </pattern>
+<short>1053</short>
+<example type='incorrect'><marker>way peoples</marker></example>
+</rule>
+<rule id="1054" name="1054">
+ <pattern>
+ <token>etc.....</token>
+ </pattern>
+<short>1054</short>
+<example type='incorrect'><marker>etc.....</marker></example>
+</rule>
+<rule id="1055" name="1055">
+ <pattern>
+ <token>Some</token>
+<token>peoples</token>
+ </pattern>
+<short>1055</short>
+<example type='incorrect'><marker>Some peoples</marker></example>
+</rule>
+<rule id="1056" name="1056">
+ <pattern>
+ <token>life.he</token>
+ </pattern>
+<short>1056</short>
+<example type='incorrect'><marker>life.he</marker></example>
+</rule>
+<rule id="1057" name="1057">
+ <pattern>
+ <token>and</token>
+<token>this</token>
+<token>beautiful</token>
+<token>places</token>
+ </pattern>
+<short>1057</short>
+<example type='incorrect'>and <marker>this</marker> beautiful places</example>
+</rule>
+<rule id="1058" name="1058">
+ <pattern>
+ <token>statue</token>
+<token>means</token>
+<token>us</token>
+ </pattern>
+<short>1058</short>
+<example type='incorrect'><marker>statue means us</marker></example>
+</rule>
+<rule id="1059" name="1059">
+ <pattern>
+ <token>this</token>
+<token>is</token>
+<token>built</token>
+<token>by</token>
+ </pattern>
+<short>1059</short>
+<example type='incorrect'><marker>this is built by</marker></example>
+</rule>
+<rule id="1060" name="1060">
+ <pattern>
+ <token>locations.the</token>
+ </pattern>
+<short>1060</short>
+<example type='incorrect'><marker>locations.the</marker></example>
+</rule>
+<rule id="1061" name="1061">
+ <pattern>
+ <token>world.the</token>
+ </pattern>
+<short>1061</short>
+<example type='incorrect'><marker>world.the</marker></example>
+</rule>
+<rule id="1062" name="1062">
+ <pattern>
+ <token>he</token>
+<token>had</token>
+<token>used</token>
+<token>to</token>
+<token>build</token>
+<token>the</token>
+<token>Tajmahal</token>
+ </pattern>
+<short>1062</short>
+<example type='incorrect'><marker>he had used</marker> to build the Tajmahal </example>
+</rule>
+<rule id="1063" name="1063">
+ <pattern>
+ <token>constructed.it</token>
+ </pattern>
+<short>1063</short>
+<example type='incorrect'><marker>constructed.it</marker></example>
+</rule>
+<rule id="1064" name="1064">
+ <pattern>
+ <token>secret.after</token>
+ </pattern>
+<short>1064</short>
+<example type='incorrect'><marker>secret.after </marker></example>
+</rule>
+<rule id="1065" name="1065">
+ <pattern>
+ <token>picture.it</token>
+ </pattern>
+<short>1065</short>
+<example type='incorrect'><marker>picture.it</marker></example>
+</rule>
+<rule id="1066" name="1066">
+ <pattern>
+ <token>steel.then</token>
+ </pattern>
+<short>1066</short>
+<example type='incorrect'><marker>steel.then</marker></example>
+</rule>
+<rule id="1067" name="1067">
+ <pattern>
+ <token>another.all</token>
+ </pattern>
+<short>1067</short>
+<example type='incorrect'><marker>another.all</marker></example>
+</rule>
+<rule id="1068" name="1068">
+ <pattern>
+ <token>wonders.wonders</token>
+ </pattern>
+<short>1068</short>
+<example type='incorrect'><marker>wonders.wonders</marker></example>
+</rule>
+<rule id="1069" name="1069">
+ <pattern>
+ <token>it.mostly</token>
+ </pattern>
+<short>1069</short>
+<example type='incorrect'><marker>it.mostly</marker></example>
+</rule>
+<rule id="1070" name="1070">
+ <pattern>
+ <token>wonders.this</token>
+ </pattern>
+<short>1070</short>
+<example type='incorrect'><marker>wonders.this</marker></example>
+</rule>
+<rule id="1071" name="1071">
+ <pattern>
+ <token>things.it</token>
+ </pattern>
+<short>1071</short>
+<example type='incorrect'><marker>things.it</marker></example>
+</rule>
+<rule id="1072" name="1072">
+ <pattern>
+ <token>things.man</token>
+ </pattern>
+<short>1072</short>
+<example type='incorrect'><marker>things.man</marker></example>
+</rule>
+<rule id="1073" name="1073">
+ <pattern>
+ <token>they</token>
+<token>supposed</token>
+<token>to</token>
+<token>get</token>
+<token>injury</token>
+ </pattern>
+<short>1073</short>
+<example type='incorrect'>they <marker>supposed to</marker> get injury</example>
+</rule>
+<rule id="1074" name="1074">
+ <pattern>
+ <token>habitat</token>
+<token>place</token>
+ </pattern>
+<short>1074</short>
+<example type='incorrect'><marker>habitat place</marker></example>
+</rule>
+<rule id="1075" name="1075">
+ <pattern>
+ <token>place</token>
+<token>of</token>
+<token>live</token>
+ </pattern>
+<short>1075</short>
+<example type='incorrect'><marker>place of live</marker></example>
+</rule>
+<rule id="1076" name="1076">
+ <pattern>
+ <token>there</token>
+<token>is</token>
+<token>a</token>
+<token>lack</token>
+<token>of</token>
+<token>water</token>
+ </pattern>
+<short>1076</short>
+<example type='incorrect'><marker>there is a lack</marker> of water</example>
+</rule>
+<rule id="1077" name="1077">
+ <pattern>
+ <token>it</token>
+<token>a</token>
+<token>punishable</token>
+ </pattern>
+<short>1077</short>
+<example type='incorrect'><marker>it a punishable</marker></example>
+</rule>
+<rule id="1078" name="1078">
+ <pattern>
+ <token>eat</token>
+<token>or</token>
+<token>se</token>
+<token>I</token>
+<token>request</token>
+<token>you</token>
+<token>people</token>
+<token>don't</token>
+ </pattern>
+<short>1078</short>
+<example type='incorrect'>eat <marker>or se</marker> I request you people don't</example>
+</rule>
+<rule id="1079" name="1079">
+ <pattern>
+ <token>view,</token>
+<token>We</token>
+<token>should</token>
+<token>not</token>
+<token>keep</token>
+<token>the</token>
+<token>animals</token>
+ </pattern>
+<short>1079</short>
+<example type='incorrect'>view, <marker>We</marker> should not keep the animals</example>
+</rule>
+<rule id="1080" name="1080">
+ <pattern>
+ <token>its</token>
+<token>own</token>
+<token>place;</token>
+<token>Animals</token>
+<token>always</token>
+<token>do</token>
+<token>not</token>
+ </pattern>
+<short>1080</short>
+<example type='incorrect'>its own place; <marker>Animals</marker> always do not</example>
+</rule>
+<rule id="1081" name="1081">
+ <pattern>
+ <token>would</token>
+<token>a</token>
+<token>human</token>
+<token>accept</token>
+<token>to</token>
+<token>live</token>
+<token>in</token>
+<token>a</token>
+<token>cage</token>
+<token>?</token>
+<token>The</token>
+ </pattern>
+<short>1081</short>
+<example type='incorrect'>would a human accept to live in a <marker>cage ?</marker> The </example>
+</rule>
+<rule id="1082" name="1082">
+ <pattern>
+ <token>The</token>
+<token>topic</token>
+<token>is</token>
+<token>about</token>
+<token>it</token>
+<token>appropriate</token>
+ </pattern>
+<short>1082</short>
+<example type='incorrect'>The topic is <marker>about it appropriate</marker></example>
+</rule>
+<rule id="1083" name="1083">
+ <pattern>
+ <token>they</token>
+<token>should</token>
+<token>freedom</token>
+<token>in</token>
+<token>our</token>
+<token>world</token>
+ </pattern>
+<short>1083</short>
+<example type='incorrect'><marker>they should freedom</marker> in our world</example>
+</rule>
+<rule id="1084" name="1084">
+ <pattern>
+ <token>large</token>
+<token>numbers</token>
+<token>of</token>
+<token>zoo</token>
+ </pattern>
+<short>1084</short>
+<example type='incorrect'><marker>large numbers of zoo</marker></example>
+</rule>
+<rule id="1085" name="1085">
+ <pattern>
+ <token>more</token>
+<token>numbers</token>
+<token>of</token>
+<token>animal</token>
+ </pattern>
+<short>1085</short>
+<example type='incorrect'><marker>more numbers of animal</marker></example>
+</rule>
+<rule id="1086" name="1086">
+ <pattern>
+ <token>so</token>
+<token>all</token>
+<token>are</token>
+<token>cut</token>
+<token>in</token>
+<token>many</token>
+<token>of</token>
+<token>the</token>
+<token>trees</token>
+<token>in</token>
+<token>forest</token>
+ </pattern>
+<short>1086</short>
+<example type='incorrect'>so <marker>all are cut in many</marker> of the trees in forest</example>
+</rule>
+<rule id="1087" name="1087">
+ <pattern>
+ <token>supports</token>
+<token>for</token>
+<token>all</token>
+<token>applications</token>
+ </pattern>
+<short>1087</short>
+<example type='incorrect'><marker>supports for all applications</marker></example>
+</rule>
+<rule id="1088" name="1088">
+ <pattern>
+ <token>Even</token>
+<token>in</token>
+<token>party</token>
+<token>place</token>
+<token>they</token>
+<token>were</token>
+<token>concentrating</token>
+ </pattern>
+<short>1088</short>
+<example type='incorrect'>Even in party <marker>place they were</marker> concentrating</example>
+</rule>
+<rule id="1089" name="1089">
+ <pattern>
+ <token>In</token>
+<token>before</token>
+<token>days</token>
+ </pattern>
+<short>1089</short>
+<example type='incorrect'><marker>In before days</marker></example>
+</rule>
+<rule id="1090" name="1090">
+ <pattern>
+ <token>one</token>
+<token>on</token>
+<token>a</token>
+<token>same</token>
+<token>table</token>
+<token>without</token>
+<token>showing</token>
+<token>any</token>
+<token>partiality</token>
+ </pattern>
+<short>1090</short>
+<example type='incorrect'>one <marker>on a same</marker> table without showing any partiality</example>
+</rule>
+<rule id="1091" name="1091">
+ <pattern>
+ <token>no</token>
+<token>one</token>
+<token>cannot</token>
+<token>know</token>
+ </pattern>
+<short>1091</short>
+<example type='incorrect'><marker>no one cannot know</marker></example>
+</rule>
+<rule id="1092" name="1092">
+ <pattern>
+ <token>an</token>
+<token>evening</token>
+<token>time</token>
+ </pattern>
+<short>1092</short>
+<example type='incorrect'><marker>an evening time</marker></example>
+</rule>
+<rule id="1093" name="1093">
+ <pattern>
+ <token>which</token>
+<token>is</token>
+<token>never</token>
+<token>happened</token>
+<token>before</token>
+ </pattern>
+<short>1093</short>
+<example type='incorrect'><marker>which is never</marker> happened before</example>
+</rule>
+<rule id="1094" name="1094">
+ <pattern>
+ <token>a</token>
+<token>day</token>
+<token>has</token>
+<token>a</token>
+<token>day</token>
+ </pattern>
+<short>1094</short>
+<example type='incorrect'><marker>a day has a day</marker></example>
+</rule>
+<rule id="1095" name="1095">
+ <pattern>
+ <token>They</token>
+<token>just</token>
+<token>wants</token>
+<token>the</token>
+<token>mobile</token>
+<token>to</token>
+<token>transmit</token>
+<token>some</token>
+<token>information</token>
+ </pattern>
+<short>1095</short>
+<example type='incorrect'>They <marker>just wants the</marker> mobile to transmit some information</example>
+</rule>
+<rule id="1096" name="1096">
+ <pattern>
+ <token>Bu</token>
+<token>one</token>
+<token>corner</token>
+ </pattern>
+<short>1096</short>
+<example type='incorrect'><marker>Bu one</marker> corner</example>
+</rule>
+<rule id="1097" name="1097">
+ <pattern>
+ <token>If</token>
+<token>a</token>
+<token>team</token>
+<token>members</token>
+<token>works</token>
+<token>hard</token>
+ </pattern>
+<short>1097</short>
+<example type='incorrect'>If <marker>a team members</marker> works hard</example>
+</rule>
+<rule id="1098" name="1098">
+ <pattern>
+ <token>never</token>
+<token>dies,</token>
+<token>Because</token>
+<token>its</token>
+<token>like</token>
+<token>a</token>
+<token>snail</token>
+ </pattern>
+<short>1098</short>
+<example type='incorrect'>never dies, <marker>Because</marker> its like a snail</example>
+</rule>
+<rule id="1099" name="1099">
+ <pattern>
+ <token>The</token>
+<token>picture</token>
+<token>is</token>
+<token>a</token>
+<token>creativity</token>
+ </pattern>
+<short>1099</short>
+<example type='incorrect'>The picture is a <marker>creativity</marker></example>
+</rule>
+<rule id="1100" name="1100">
+ <pattern>
+ <token>is</token>
+<token>small</token>
+<token>is</token>
+<token>size</token>
+ </pattern>
+<short>1100</short>
+<example type='incorrect'><marker>is small is size</marker></example>
+</rule>
+<rule id="1101" name="1101">
+ <pattern>
+ <token>clear4</token>
+ </pattern>
+<short>1101</short>
+<example type='incorrect'><marker>clear4</marker></example>
+</rule>
+<rule id="1102" name="1102">
+ <pattern>
+ <token>said</token>
+<token>his</token>
+<token>friends</token>
+ </pattern>
+<short>1102</short>
+<example type='incorrect'><marker>said his friends</marker></example>
+</rule>
+<rule id="1103" name="1103">
+ <pattern>
+ <token>silence</token>
+<token>in</token>
+<token>that</token>
+<token>the</token>
+<token>environment</token>
+<token>to</token>
+<token>move</token>
+<token>other</token>
+<token>place</token>
+ </pattern>
+<short>1103</short>
+<example type='incorrect'>silence in <marker>that the environment</marker> to move other place</example>
+</rule>
+<rule id="1104" name="1104">
+ <pattern>
+ <token>culprit</token>
+<token>to</token>
+<token>make</token>
+<token>order</token>
+<token>to</token>
+<token>hear</token>
+<token>that</token>
+<token>the</token>
+<token>judgement</token>
+ </pattern>
+<short>1104</short>
+<example type='incorrect'>culprit to <marker>make order</marker> to hear that the judgement</example>
+</rule>
+<rule id="1105" name="1105">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>watch</token>
+<token>that</token>
+<token>the</token>
+<token>judge</token>
+ </pattern>
+<short>1105</short>
+<example type='incorrect'><marker>I am watch that the judge</marker></example>
+</rule>
+<rule id="1106" name="1106">
+ <pattern>
+ <token>court</token>
+<token>will</token>
+<token>be</token>
+<token>used</token>
+<token>the</token>
+<token>hammer</token>
+ </pattern>
+<short>1106</short>
+<example type='incorrect'>court <marker>will be used</marker> the hammer</example>
+</rule>
+<rule id="1107" name="1107">
+ <pattern>
+ <token>they</token>
+<token>were</token>
+<token>lawyers</token>
+<token>are</token>
+<token>argument</token>
+<token>the</token>
+<token>cases</token>
+ </pattern>
+<short>1107</short>
+<example type='incorrect'><marker>they were lawyers</marker> are argument the cases</example>
+</rule>
+<rule id="1108" name="1108">
+ <pattern>
+ <token>The</token>
+<token>judge</token>
+<token>will</token>
+<token>be</token>
+<token>order</token>
+<token>for</token>
+<token>three</token>
+<token>times</token>
+ </pattern>
+<short>1108</short>
+<example type='incorrect'>The judge <marker>will be order</marker> for three times</example>
+</rule>
+<rule id="1109" name="1109">
+ <pattern>
+ <token>two</token>
+<token>peoples</token>
+<token>were</token>
+<token>died</token>
+ </pattern>
+<short>1109</short>
+<example type='incorrect'><marker>two peoples were died</marker></example>
+</rule>
+<rule id="1110" name="1110">
+ <pattern>
+ <token>going</token>
+<token>out</token>
+<token>from</token>
+<token>our</token>
+<token>hand</token>
+ </pattern>
+<short>1110</short>
+<example type='incorrect'><marker>going out from our hand</marker></example>
+</rule>
+<rule id="1111" name="1111">
+ <pattern>
+ <token>Successful</token>
+<token>persons</token>
+ </pattern>
+<short>1111</short>
+<example type='incorrect'><marker>Successful persons</marker></example>
+</rule>
+<rule id="1112" name="1112">
+ <pattern>
+ <token>failure</token>
+<token>persons</token>
+ </pattern>
+<short>1112</short>
+<example type='incorrect'><marker>failure persons</marker></example>
+</rule>
+<rule id="1113" name="1113">
+ <pattern>
+ <token>Failure</token>
+<token>persons</token>
+ </pattern>
+<short>1113</short>
+<example type='incorrect'><marker>Failure persons</marker></example>
+</rule>
+<rule id="1114" name="1114">
+ <pattern>
+ <token>successful</token>
+<token>persons</token>
+ </pattern>
+<short>1114</short>
+<example type='incorrect'><marker>successful persons</marker></example>
+</rule>
+<rule id="1115" name="1115">
+ <pattern>
+ <token>their</token>
+<token>mistakes</token>
+<token>in</token>
+<token>their</token>
+<token>failure</token>
+ </pattern>
+<short>1115</short>
+<example type='incorrect'>their <marker>mistakes in their</marker> failure</example>
+</rule>
+<rule id="1116" name="1116">
+ <pattern>
+ <token>because</token>
+<token>no</token>
+<token>one</token>
+<token>perfect</token>
+ </pattern>
+<short>1116</short>
+<example type='incorrect'>because no <marker>one perfect</marker></example>
+</rule>
+<rule id="1117" name="1117">
+ <pattern>
+ <token>But</token>
+<token>only</token>
+<token>by</token>
+<token>sitting</token>
+<token>ease</token>
+<token>day</token>
+<token>dreaming</token>
+<token>will</token>
+<token>not</token>
+<token>help</token>
+ </pattern>
+<short>1117</short>
+<example type='incorrect'>But only by <marker>sitting ease day</marker> dreaming will not help</example>
+</rule>
+<rule id="1118" name="1118">
+ <pattern>
+ <token>The</token>
+<token>should</token>
+ </pattern>
+<short>1118</short>
+<example type='incorrect'><marker>The should</marker></example>
+</rule>
+<rule id="1119" name="1119">
+ <pattern>
+ <token>ashamed,</token>
+<token>It</token>
+<token>is</token>
+<token>newer</token>
+<token>method</token>
+ </pattern>
+<short>1119</short>
+<example type='incorrect'>ashamed, <marker>It</marker> is newer method</example>
+</rule>
+<rule id="1120" name="1120">
+ <pattern>
+ <token>some</token>
+<token>types</token>
+<token>of</token>
+<token>pollution</token>
+ </pattern>
+<short>1120</short>
+<example type='incorrect'><marker>some types of pollution</marker></example>
+</rule>
+<rule id="1121" name="1121">
+ <pattern>
+ <token>such</token>
+<token>are</token>
+<token>air</token>
+<token>pollution</token>
+ </pattern>
+<short>1121</short>
+<example type='incorrect'><marker>such are</marker> air pollution</example>
+</rule>
+<rule id="1122" name="1122">
+ <pattern>
+ <token>world</token>
+<token>are</token>
+<token>liked</token>
+<token>the</token>
+<token>modern</token>
+<token>society</token>
+ </pattern>
+<short>1122</short>
+<example type='incorrect'>world <marker>are liked</marker> the modern society</example>
+</rule>
+<rule id="1123" name="1123">
+ <pattern>
+ <token>ancient</token>
+<token>days</token>
+<token>lives</token>
+<token>their</token>
+<token>healthy</token>
+<token>life</token>
+ </pattern>
+<short>1123</short>
+<example type='incorrect'>ancient <marker>days lives their</marker> healthy life</example>
+</rule>
+<rule id="1124" name="1124">
+ <pattern>
+ <token>without</token>
+<token>affected</token>
+<token>from</token>
+<token>any</token>
+<token>diseases</token>
+ </pattern>
+<short>1124</short>
+<example type='incorrect'><marker>without affected</marker> from any diseases</example>
+</rule>
+<rule id="1125" name="1125">
+ <pattern>
+ <token>This</token>
+<token>is</token>
+<token>want</token>
+<token>to</token>
+<token>be</token>
+<token>gets</token>
+<token>changed</token>
+ </pattern>
+<short>1125</short>
+<example type='incorrect'>This is <marker>want to be gets</marker> changed</example>
+</rule>
+<rule id="1126" name="1126">
+ <pattern>
+ <token>poorer</token>
+<token>than</token>
+<token>the</token>
+<token>before</token>
+ </pattern>
+<short>1126</short>
+<example type='incorrect'>poorer than <marker>the before</marker></example>
+</rule>
+<rule id="1127" name="1127">
+ <pattern>
+ <token>We</token>
+<token>used</token>
+<token>huge</token>
+<token>amount</token>
+<token>of</token>
+<token>man</token>
+<token>made</token>
+<token>fertilizers</token>
+ </pattern>
+<short>1127</short>
+<example type='incorrect'><marker>We used huge</marker> amount of man made fertilizers</example>
+</rule>
+<rule id="1128" name="1128">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>regret</token>
+<token>to</token>
+<token>say</token>
+<token>that</token>
+ </pattern>
+<short>1128</short>
+<example type='incorrect'><marker>I am regret</marker> to say that</example>
+</rule>
+<rule id="1129" name="1129">
+ <pattern>
+ <token>information</token>
+<token>to</token>
+<token>you</token>
+<token>by</token>
+<token>through</token>
+<token>this</token>
+<token>mail</token>
+ </pattern>
+<short>1129</short>
+<example type='incorrect'>information to <marker>you by through</marker> this mail</example>
+</rule>
+<rule id="1130" name="1130">
+ <pattern>
+ <token>peoples</token>
+<token>are</token>
+<token>can</token>
+<token>not</token>
+<token>be</token>
+<token>able</token>
+<token>to</token>
+<token>go</token>
+<token>smoothly</token>
+ </pattern>
+<short>1130</short>
+<example type='incorrect'><marker>peoples are can</marker> not be able to go smoothly</example>
+</rule>
+<rule id="1131" name="1131">
+ <pattern>
+ <token>accidents</token>
+<token>are</token>
+<token>happened</token>
+ </pattern>
+<short>1131</short>
+<example type='incorrect'><marker>accidents are happened</marker></example>
+</rule>
+<rule id="1132" name="1132">
+ <pattern>
+ <token>waters</token>
+<token>are</token>
+<token>stganant</token>
+<token>in</token>
+<token>the</token>
+<token>roads</token>
+ </pattern>
+<short>1132</short>
+<example type='incorrect'><marker>waters are</marker> stganant in the roads</example>
+</rule>
+<rule id="1133" name="1133">
+ <pattern>
+ <token>to</token>
+<token>go</token>
+<token>school</token>
+<token>in</token>
+<token>safely</token>
+ </pattern>
+<short>1133</short>
+<example type='incorrect'>to go <marker>school in safely</marker></example>
+</rule>
+<rule id="1134" name="1134">
+ <pattern>
+ <token>the</token>
+<token>most</token>
+<token>disadvantages</token>
+<token>for</token>
+<token>my</token>
+<token>village</token>
+ </pattern>
+<short>1134</short>
+<example type='incorrect'>the <marker>most disadvantages</marker> for my village</example>
+</rule>
+<rule id="1135" name="1135">
+ <pattern>
+ <token>bus</token>
+<token>are</token>
+<token>not</token>
+<token>come</token>
+<token>to</token>
+<token>my</token>
+<token>area</token>
+ </pattern>
+<short>1135</short>
+<example type='incorrect'>bus <marker>are not come</marker> to my area</example>
+</rule>
+<rule id="1136" name="1136">
+ <pattern>
+ <token>village</token>
+<token>peoples</token>
+<token>are</token>
+<token>not</token>
+<token>able</token>
+<token>to</token>
+<token>go</token>
+ </pattern>
+<short>1136</short>
+<example type='incorrect'><marker>village peoples are</marker> not able to go</example>
+</rule>
+<rule id="1137" name="1137">
+ <pattern>
+ <token>main</token>
+<token>disadvantages</token>
+<token>of</token>
+<token>my</token>
+<token>village</token>
+ </pattern>
+<short>1137</short>
+<example type='incorrect'><marker>main disadvantages</marker> of my village</example>
+</rule>
+<rule id="1138" name="1138">
+ <pattern>
+ <token>It</token>
+<token>this</token>
+<token>condition</token>
+<token>exists</token>
+<token>further</token>
+ </pattern>
+<short>1138</short>
+<example type='incorrect'><marker>It this</marker> condition exists further</example>
+</rule>
+<rule id="1139" name="1139">
+ <pattern>
+ <token>also</token>
+<token>an</token>
+<token>opening</token>
+<token>of</token>
+<token>drainage</token>
+<token>in</token>
+<token>the</token>
+<token>roads</token>
+ </pattern>
+<short>1139</short>
+<example type='incorrect'>also an <marker>opening of drainage</marker> in the roads</example>
+</rule>
+<rule id="1140" name="1140">
+ <pattern>
+ <token>They</token>
+<token>are</token>
+<token>travel</token>
+<token>to</token>
+<token>the</token>
+<token>near</token>
+<token>towns</token>
+<token>for</token>
+<token>their</token>
+<token>earnings</token>
+ </pattern>
+<short>1140</short>
+<example type='incorrect'><marker>They are travel</marker> to the near towns for their earnings</example>
+</rule>
+<rule id="1141" name="1141">
+ <pattern>
+ <token>Traffic</token>
+<token>jam</token>
+<token>is</token>
+<token>happened</token>
+<token>frequently</token>
+ </pattern>
+<short>1141</short>
+<example type='incorrect'>Traffic jam <marker>is happened</marker> frequently</example>
+</rule>
+<rule id="1142" name="1142">
+ <pattern>
+ <token>There</token>
+<token>are</token>
+<token>many</token>
+<token>shool</token>
+<token>children</token>
+<token>are</token>
+<token>there</token>
+ </pattern>
+<short>1142</short>
+<example type='incorrect'>There are many shool children <marker>are there</marker></example>
+</rule>
+<rule id="1143" name="1143">
+ <pattern>
+ <token>there</token>
+<token>will</token>
+<token>no</token>
+<token>chance</token>
+<token>of</token>
+ </pattern>
+<short>1143</short>
+<example type='incorrect'><marker>there will no</marker> chance of </example>
+</rule>
+<rule id="1144" name="1144">
+ <pattern>
+ <token>becomes</token>
+<token>the</token>
+<token>education</token>
+<token>more</token>
+<token>social</token>
+ </pattern>
+<short>1144</short>
+<example type='incorrect'><marker>becomes the education more social</marker></example>
+</rule>
+<rule id="1145" name="1145">
+ <pattern>
+ <token>students</token>
+<token>are</token>
+<token>feel</token>
+<token>comfortable</token>
+ </pattern>
+<short>1145</short>
+<example type='incorrect'><marker>students are feel comfortable</marker></example>
+</rule>
+<rule id="1146" name="1146">
+ <pattern>
+ <token>The</token>
+<token>schools</token>
+<token>are</token>
+<token>creating</token>
+<token>eager</token>
+<token>towards</token>
+<token>the</token>
+<token>studies</token>
+ </pattern>
+<short>1146</short>
+<example type='incorrect'>The schools are <marker>creating eager</marker> towards the studies</example>
+</rule>
+<rule id="1147" name="1147">
+ <pattern>
+ <token>3years</token>
+ </pattern>
+<short>1147</short>
+<example type='incorrect'><marker>3years</marker></example>
+</rule>
+<rule id="1148" name="1148">
+ <pattern>
+ <token>Parents</token>
+<token>in</token>
+<token>the</token>
+<token>motive</token>
+<token>of</token>
+<token>guiding</token>
+ </pattern>
+<short>1148</short>
+<example type='incorrect'>Parents <marker>in the motive</marker> of guiding</example>
+</rule>
+<rule id="1149" name="1149">
+ <pattern>
+ <token>make</token>
+<token>the</token>
+<token>children</token>
+<token>to</token>
+<token>be</token>
+<token>known</token>
+<token>all</token>
+<token>the</token>
+<token>languages</token>
+ </pattern>
+<short>1149</short>
+<example type='incorrect'>make the <marker>children to be known</marker> all the languages</example>
+</rule>
+<rule id="1150" name="1150">
+ <pattern>
+ <token>they</token>
+<token>are</token>
+<token>studied</token>
+<token>in</token>
+<token>high</token>
+<token>level</token>
+ </pattern>
+<short>1150</short>
+<example type='incorrect'><marker>they are studied</marker> in high level</example>
+</rule>
+<rule id="1151" name="1151">
+ <pattern>
+ <token>they</token>
+<token>fall</token>
+<token>into</token>
+<token>schools</token>
+<token>for</token>
+<token>learning</token>
+ </pattern>
+<short>1151</short>
+<example type='incorrect'><marker>they fall into schools</marker> for learning</example>
+</rule>
+<rule id="1152" name="1152">
+ <pattern>
+ <token>good</token>
+<token>way</token>
+<token>by</token>
+<token>join</token>
+<token>the</token>
+<token>students</token>
+<token>in</token>
+<token>schools</token>
+ </pattern>
+<short>1152</short>
+<example type='incorrect'>good <marker>way by join the students</marker> in schools</example>
+</rule>
+<rule id="1153" name="1153">
+ <pattern>
+ <token>concentrate</token>
+<token>of</token>
+<token>their</token>
+<token>studies</token>
+ </pattern>
+<short>1153</short>
+<example type='incorrect'><marker>concentrate of their studies</marker></example>
+</rule>
+<rule id="1154" name="1154">
+ <pattern>
+ <token>maintain</token>
+<token>their</token>
+<token>children</token>
+ </pattern>
+<short>1154</short>
+<example type='incorrect'><marker>maintain their children</marker></example>
+</rule>
+<rule id="1155" name="1155">
+ <pattern>
+ <token>children</token>
+<token>mind</token>
+<token>it</token>
+<token>to</token>
+<token>do</token>
+<token>their</token>
+<token>work</token>
+ </pattern>
+<short>1155</short>
+<example type='incorrect'>children <marker>mind it to do their work</marker></example>
+</rule>
+<rule id="1156" name="1156">
+ <pattern>
+ <token>When</token>
+<token>a</token>
+<token>child</token>
+<token>born</token>
+ </pattern>
+<short>1156</short>
+<example type='incorrect'><marker>When a child born</marker></example>
+</rule>
+<rule id="1157" name="1157">
+ <pattern>
+ <token>parents</token>
+<token>were</token>
+<token>very</token>
+<token>glad</token>
+ </pattern>
+<short>1157</short>
+<example type='incorrect'><marker>parents were very glad</marker></example>
+</rule>
+<rule id="1158" name="1158">
+ <pattern>
+ <token>mainly</token>
+<token>inform</token>
+ </pattern>
+<short>1158</short>
+<example type='incorrect'><marker>mainly inform</marker></example>
+</rule>
+<rule id="1159" name="1159">
+ <pattern>
+ <token>meeting</token>
+<token>will</token>
+<token>be</token>
+<token>rescheduling</token>
+<token>for</token>
+<token>upcoming</token>
+<token>days</token>
+ </pattern>
+<short>1159</short>
+<example type='incorrect'><marker>meeting will be rescheduling</marker> for upcoming days</example>
+</rule>
+<rule id="1160" name="1160">
+ <pattern>
+ <token>through</token>
+<token>email</token>
+<token>i</token>
+<token>apalogize</token>
+<token>for</token>
+<token>this</token>
+<token>mail</token>
+ </pattern>
+<short>1160</short>
+<example type='incorrect'>through <marker>email i apalogize</marker> for this mail</example>
+</rule>
+<rule id="1161" name="1161">
+ <pattern>
+ <token>the</token>
+<token>date</token>
+<token>was</token>
+<token>next</token>
+<token>day</token>
+<token>of</token>
+<token>that</token>
+<token>is</token>
+<token>not</token>
+<token>will</token>
+<token>change</token>
+ </pattern>
+<short>1161</short>
+<example type='incorrect'>the <marker>date was next day of that</marker> is not will change</example>
+</rule>
+<rule id="1162" name="1162">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>regret</token>
+<token>to</token>
+<token>write</token>
+ </pattern>
+<short>1162</short>
+<example type='incorrect'><marker>I am regret to write</marker></example>
+</rule>
+<rule id="1163" name="1163">
+ <pattern>
+ <token>their</token>
+<token>project</token>
+<token>in</token>
+<token>regular</token>
+<token>work</token>
+ </pattern>
+<short>1163</short>
+<example type='incorrect'><marker>their project in regular work</marker></example>
+</rule>
+<rule id="1164" name="1164">
+ <pattern>
+ <token>take</token>
+<token>postponed</token>
+<token>meeting</token>
+<token>as</token>
+<token>serious</token>
+ </pattern>
+<short>1164</short>
+<example type='incorrect'><marker>take postponed meeting as serious</marker></example>
+</rule>
+<rule id="1165" name="1165">
+ <pattern>
+ <token>packing</token>
+<token>their</token>
+<token>things</token>
+ </pattern>
+<short>1165</short>
+<example type='incorrect'><marker>packing their things</marker></example>
+</rule>
+<rule id="1166" name="1166">
+ <pattern>
+ <token>Negative</token>
+<token>thinking</token>
+<token>is</token>
+<token>the</token>
+<token>important</token>
+<token>things</token>
+ </pattern>
+<short>1166</short>
+<example type='incorrect'>Negative thinking is the important <marker>things</marker></example>
+</rule>
+<rule id="1167" name="1167">
+ <pattern>
+ <token>some</token>
+<token>ask</token>
+<token>help</token>
+ </pattern>
+<short>1167</short>
+<example type='incorrect'><marker>some ask help</marker></example>
+</rule>
+<rule id="1168" name="1168">
+ <pattern>
+ <token>as</token>
+<token>two</token>
+<token>kinds</token>
+<token>as</token>
+ </pattern>
+<short>1168</short>
+<example type='incorrect'><marker>as two kinds as</marker></example>
+</rule>
+<rule id="1169" name="1169">
+ <pattern>
+ <token>but</token>
+<token>it</token>
+<token>we</token>
+<token>have</token>
+<token>to</token>
+<token>pay</token>
+<token>our</token>
+<token>life</token>
+ </pattern>
+<short>1169</short>
+<example type='incorrect'><marker>but it we have</marker> to pay our life</example>
+</rule>
+<rule id="1170" name="1170">
+ <pattern>
+ <token>they</token>
+<token>realize</token>
+<token>it</token>
+<token>is</token>
+<token>harm</token>
+<token>and</token>
+<token>injurious</token>
+ </pattern>
+<short>1170</short>
+<example type='incorrect'>they realize <marker>it is harm</marker> and injurious</example>
+</rule>
+<rule id="1171" name="1171">
+ <pattern>
+ <token>Habit</token>
+<token>of</token>
+<token>smoking</token>
+<token>is</token>
+<token>not</token>
+<token>only</token>
+<token>affect</token>
+<token>the</token>
+<token>single</token>
+<token>person</token>
+ </pattern>
+<short>1171</short>
+<example type='incorrect'>Habit of smoking is <marker>not only affect</marker> the single person</example>
+</rule>
+<rule id="1172" name="1172">
+ <pattern>
+ <token>government</token>
+<token>should</token>
+<token>takes</token>
+<token>the</token>
+<token>immediate</token>
+<token>steps</token>
+ </pattern>
+<short>1172</short>
+<example type='incorrect'>government <marker>should takes</marker> the immediate steps</example>
+</rule>
+<rule id="1173" name="1173">
+ <pattern>
+ <token>this</token>
+<token>is</token>
+<token>a</token>
+<token>followed</token>
+<token>by</token>
+<token>every</token>
+<token>media</token>
+ </pattern>
+<short>1173</short>
+<example type='incorrect'><marker>this is a followed</marker> by every media</example>
+</rule>
+<rule id="1174" name="1174">
+ <pattern>
+ <token>kinds</token>
+<token>of</token>
+<token>shops</token>
+<token>are</token>
+<token>want</token>
+<token>to</token>
+<token>be</token>
+<token>removed</token>
+<token>from</token>
+<token>our</token>
+<token>country</token>
+ </pattern>
+<short>1174</short>
+<example type='incorrect'>kinds of <marker>shops are want to be</marker> removed from our country</example>
+</rule>
+<rule id="1175" name="1175">
+ <pattern>
+ <token>many</token>
+<token>children</token>
+<token>was</token>
+<token>already</token>
+<token>affecte</token>
+ </pattern>
+<short>1175</short>
+<example type='incorrect'><marker>many children was already affecte</marker></example>
+</rule>
+<rule id="1176" name="1176">
+ <pattern>
+ <token>Which</token>
+<token>are</token>
+<token>created</token>
+<token>by</token>
+<token>using</token>
+<token>of</token>
+ </pattern>
+<short>1176</short>
+<example type='incorrect'>Which are created by <marker>using of</marker> </example>
+</rule>
+<rule id="1177" name="1177">
+ <pattern>
+ <token>regarding</token>
+<token>to</token>
+<token>his</token>
+ </pattern>
+<short>1177</short>
+<example type='incorrect'><marker>regarding to his</marker></example>
+</rule>
+<rule id="1178" name="1178">
+ <pattern>
+ <token>can</token>
+<token>be</token>
+<token>spend</token>
+ </pattern>
+<short>1178</short>
+<example type='incorrect'><marker>can be spend</marker></example>
+</rule>
+<rule id="1179" name="1179">
+ <pattern>
+ <token>reading</token>
+<token>books</token>
+<token>improve</token>
+ </pattern>
+<short>1179</short>
+<example type='incorrect'><marker>reading books improve</marker></example>
+</rule>
+<rule id="1180" name="1180">
+ <pattern>
+ <token>represents</token>
+<token>about</token>
+<token>library</token>
+ </pattern>
+<short>1180</short>
+<example type='incorrect'><marker>represents about library</marker></example>
+</rule>
+<rule id="1181" name="1181">
+ <pattern>
+ <token>thermometer</token>
+<token>on</token>
+<token>that</token>
+<token>mouth</token>
+ </pattern>
+<short>1181</short>
+<example type='incorrect'>thermometer <marker>on that mouth</marker></example>
+</rule>
+<rule id="1182" name="1182">
+ <pattern>
+ <token>This</token>
+<token>ozone</token>
+<token>layer</token>
+ </pattern>
+<short>1182</short>
+<example type='incorrect'><marker>This ozone layer</marker></example>
+</rule>
+<rule id="1183" name="1183">
+ <pattern>
+ <token>we</token>
+<token>are</token>
+<token>using</token>
+<token>of</token>
+ </pattern>
+<short>1183</short>
+<example type='incorrect'>we are <marker>using of</marker></example>
+</rule>
+<rule id="1184" name="1184">
+ <pattern>
+ <token>created</token>
+<token>caused</token>
+ </pattern>
+<short>1184</short>
+<example type='incorrect'><marker>created caused</marker></example>
+</rule>
+<rule id="1185" name="1185">
+ <pattern>
+ <token>so</token>
+<token>that</token>
+<token>so</token>
+ </pattern>
+<short>1185</short>
+<example type='incorrect'><marker>so that so</marker></example>
+</rule>
+<rule id="1186" name="1186">
+ <pattern>
+ <token>people</token>
+<token>they</token>
+<token>are</token>
+<token>also</token>
+<token>should</token>
+<token>follow</token>
+ </pattern>
+<short>1186</short>
+<example type='incorrect'>people <marker>they are also should</marker> follow</example>
+</rule>
+<rule id="1187" name="1187">
+ <pattern>
+ <token>students</token>
+<token>is</token>
+ </pattern>
+<short>1187</short>
+<example type='incorrect'><marker>students is</marker></example>
+</rule>
+<rule id="1188" name="1188">
+ <pattern>
+ <token>confirm</token>
+<token>says</token>
+<token>that</token>
+<token>we</token>
+<token>are</token>
+<token>save</token>
+<token>the</token>
+<token>earth</token>
+ </pattern>
+<short>1188</short>
+<example type='incorrect'><marker>confirm says that we are save the earth</marker></example>
+</rule>
+<rule id="1189" name="1189">
+ <pattern>
+ <token>represented</token>
+<token>by</token>
+<token>the</token>
+<token>regarding</token>
+<token>heat</token>
+ </pattern>
+<short>1189</short>
+<example type='incorrect'>represented by the <marker>regarding heat</marker></example>
+</rule>
+<rule id="1190" name="1190">
+ <pattern>
+ <token>peoples</token>
+<token>are</token>
+<token>does</token>
+<token>not</token>
+<token>know</token>
+ </pattern>
+<short>1190</short>
+<example type='incorrect'><marker>peoples are does not know</marker></example>
+</rule>
+<rule id="1191" name="1191">
+ <pattern>
+ <token>the</token>
+<token>tree</token>
+<token>it</token>
+<token>should</token>
+<token>be</token>
+<token>spoil</token>
+<token>your</token>
+<token>life</token>
+ </pattern>
+<short>1191</short>
+<example type='incorrect'>the tree it <marker>should be spoil</marker> your life</example>
+</rule>
+<rule id="1192" name="1192">
+ <pattern>
+ <token>global</token>
+<token>warming</token>
+<token>has</token>
+<token>been</token>
+<token>obtained</token>
+<token>cutting</token>
+<token>the</token>
+ </pattern>
+<short>1192</short>
+<example type='incorrect'>global warming has been <marker>obtained cutting</marker> the</example>
+</rule>
+<rule id="1193" name="1193">
+ <pattern>
+ <token>The</token>
+<token>every</token>
+<token>persons</token>
+ </pattern>
+<short>1193</short>
+<example type='incorrect'><marker>The every persons</marker></example>
+</rule>
+<rule id="1194" name="1194">
+ <pattern>
+ <token>Many</token>
+<token>of</token>
+<token>the</token>
+<token>persons</token>
+<token>were</token>
+<token>tried</token>
+<token>to</token>
+<token>reduce</token>
+ </pattern>
+<short>1194</short>
+<example type='incorrect'>Many of the persons <marker>were</marker> tried to reduce</example>
+</rule>
+<rule id="1195" name="1195">
+ <pattern>
+ <token>from</token>
+<token>more</token>
+<token>from</token>
+ </pattern>
+<short>1195</short>
+<example type='incorrect'><marker>from more from</marker></example>
+</rule>
+<rule id="1196" name="1196">
+ <pattern>
+ <token>want</token>
+<token>to</token>
+<token>go</token>
+ </pattern>
+<short>1196</short>
+<example type='incorrect'><marker>want to go</marker></example>
+</rule>
+<rule id="1197" name="1197">
+ <pattern>
+ <token>the</token>
+<token>computer</token>
+<token>is</token>
+<token>large</token>
+<token>and</token>
+<token>we</token>
+<token>cannot</token>
+<token>take</token>
+<token>it</token>
+<token>to</token>
+<token>anywhere</token>
+ </pattern>
+<short>1197</short>
+<example type='incorrect'>the computer is large and we cannot <marker>take it to anywhere</marker></example>
+</rule>
+<rule id="1198" name="1198">
+ <pattern>
+ <token>lower</token>
+<token>temperature</token>
+<token>otherwise</token>
+<token>it</token>
+<token>may</token>
+<token>damaged</token>
+ </pattern>
+<short>1198</short>
+<example type='incorrect'>lower temperature otherwise <marker>it may damaged</marker></example>
+</rule>
+<rule id="1199" name="1199">
+ <pattern>
+ <token>older</token>
+<token>days</token>
+<token>people</token>
+<token>uses</token>
+<token>telegram</token>
+ </pattern>
+<short>1199</short>
+<example type='incorrect'>older days <marker>people uses</marker> telegram</example>
+</rule>
+<rule id="1200" name="1200">
+ <pattern>
+ <token>the</token>
+<token>information</token>
+<token>transmitted</token>
+<token>in</token>
+<token>the</token>
+<token>sender</token>
+<token>side</token>
+ </pattern>
+<short>1200</short>
+<example type='incorrect'>the information transmitted <marker>in the sender side</marker></example>
+</rule>
+<rule id="1201" name="1201">
+ <pattern>
+ <token>before</token>
+<token>this</token>
+<token>chip</token>
+<token>is</token>
+<token>came</token>
+<token>from</token>
+<token>micro</token>
+<token>processor</token>
+ </pattern>
+<short>1201</short>
+<example type='incorrect'>before this chip <marker>is came</marker> from micro processor</example>
+</rule>
+<rule id="1202" name="1202">
+ <pattern>
+ <token>The</token>
+<token>present</token>
+<token>It</token>
+<token>field</token>
+<token>using</token>
+ </pattern>
+<short>1202</short>
+<example type='incorrect'>The present <marker>It field</marker> using</example>
+</rule>
+<rule id="1203" name="1203">
+ <pattern>
+ <token>any</token>
+<token>processor</token>
+<token>is</token>
+<token>support</token>
+<token>only</token>
+<token>a</token>
+<token>particular</token>
+ </pattern>
+<short>1203</short>
+<example type='incorrect'>any processor <marker>is support</marker> only a particular</example>
+</rule>
+<rule id="1204" name="1204">
+ <pattern>
+ <token>design</token>
+<token>the</token>
+<token>chip</token>
+<token>we</token>
+<token>need</token>
+<token>t</token>
+<token>follow</token>
+<token>the</token>
+<token>all</token>
+<token>particular</token>
+<token>steps</token>
+ </pattern>
+<short>1204</short>
+<example type='incorrect'>design the chip we <marker>need t follow</marker> the all particular steps</example>
+</rule>
+<rule id="1205" name="1205">
+ <pattern>
+ <token>Mobile</token>
+<token>phones</token>
+<token>becomes</token>
+<token>popular</token>
+ </pattern>
+<short>1205</short>
+<example type='incorrect'>Mobile <marker>phones becomes</marker> popular</example>
+</rule>
+<rule id="1206" name="1206">
+ <pattern>
+ <token>before</token>
+<token>that</token>
+<token>there</token>
+<token>was</token>
+<token>so</token>
+<token>many</token>
+<token>failure's</token>
+<token>is</token>
+<token>there</token>
+ </pattern>
+<short>1206</short>
+<example type='incorrect'>before that there was so many failure's <marker>is there</marker></example>
+</rule>
+<rule id="1207" name="1207">
+ <pattern>
+ <token>persons</token>
+<token>do</token>
+<token>a</token>
+<token>mistake</token>
+<token>so</token>
+<token>that</token>
+<token>they</token>
+<token>able</token>
+<token>to</token>
+<token>success</token>
+<token>like</token>
+<token>some</token>
+<token>will</token>
+<token>think</token>
+ </pattern>
+<short>1207</short>
+<example type='incorrect'>persons do a mistake so that they able <marker>to success like</marker> some will think</example>
+</rule>
+<rule id="1208" name="1208">
+ <pattern>
+ <token>but</token>
+<token>Failure</token>
+<token>will</token>
+<token>the</token>
+<token>make</token>
+<token>person</token>
+<token>to</token>
+<token>understand</token>
+<token>more</token>
+<token>knowledge</token>
+<token>from</token>
+<token>related</token>
+<token>sites</token>
+ </pattern>
+<short>1208</short>
+<example type='incorrect'>but <marker>Failure will the make</marker> person to understand more knowledge from related sites</example>
+</rule>
+<rule id="1209" name="1209">
+ <pattern>
+ <token>the</token>
+<token>lamp</token>
+<token>in</token>
+<token>his</token>
+<token>first</token>
+<token>time</token>
+<token>he</token>
+<token>not</token>
+<token>found</token>
+<token>the</token>
+<token>result</token>
+<token>he</token>
+<token>failed</token>
+ </pattern>
+<short>1209</short>
+<example type='incorrect'>the lamp in his first time <marker>he not found the</marker> result he failed</example>
+</rule>
+<rule id="1210" name="1210">
+ <pattern>
+ <token>the</token>
+<token>result</token>
+<token>he</token>
+<token>failed</token>
+<token>thousand</token>
+<token>times</token>
+<token>to</token>
+<token>found</token>
+<token>this</token>
+<token>but</token>
+<token>he</token>
+<token>did</token>
+<token>not</token>
+<token>loose</token>
+<token>the</token>
+<token>confident</token>
+<token>in</token>
+<token>it</token>
+ </pattern>
+<short>1210</short>
+<example type='incorrect'>the result he failed thousand times <marker>to found this</marker> but he did not loose the confident in it</example>
+</rule>
+<rule id="1211" name="1211">
+ <pattern>
+ <token>we</token>
+<token>lost</token>
+<token>it</token>
+<token>we</token>
+<token>make</token>
+<token>the</token>
+<token>work</token>
+<token>as</token>
+<token>perfect</token>
+<token>after</token>
+<token>every</token>
+<token>lose</token>
+ </pattern>
+<short>1211</short>
+<example type='incorrect'>we lost it we make the <marker>work as perfect</marker> after every lose</example>
+</rule>
+<rule id="1212" name="1212">
+ <pattern>
+ <token>the</token>
+<token>next</token>
+<token>interview</token>
+<token>you</token>
+<token>will</token>
+<token>get</token>
+<token>the</token>
+<token>good</token>
+<token>job</token>
+<token>better</token>
+ </pattern>
+<short>1212</short>
+<example type='incorrect'>the next interview you will get <marker>the good job</marker> better</example>
+</rule>
+<rule id="1213" name="1213">
+ <pattern>
+ <token>than</token>
+<token>that</token>
+<token>so</token>
+<token>that</token>
+<token>work</token>
+<token>hard</token>
+<token>until</token>
+<token>you</token>
+<token>achieve</token>
+<token>it</token>
+ </pattern>
+<short>1213</short>
+<example type='incorrect'>than <marker>that so that</marker> work hard until you achieve it</example>
+</rule>
+<rule id="1214" name="1214">
+ <pattern>
+ <token>Why</token>
+<token>the</token>
+<token>person</token>
+<token>is</token>
+<token>fails</token>
+<token>they</token>
+<token>feel</token>
+<token>shy</token>
+ </pattern>
+<short>1214</short>
+<example type='incorrect'>Why the <marker>person is fails</marker> they feel shy</example>
+</rule>
+<rule id="1215" name="1215">
+ <pattern>
+ <token>think</token>
+<token>about</token>
+<token>the</token>
+<token>future</token>
+<token>what</token>
+<token>it</token>
+<token>happens</token>
+<token>which</token>
+<token>that</token>
+<token>often</token>
+<token>they</token>
+<token>do</token>
+<token>mistakes</token>
+ </pattern>
+<short>1215</short>
+<example type='incorrect'>think about the future <marker>what it happens</marker> which that often they do mistakes</example>
+</rule>
+<rule id="1216" name="1216">
+ <pattern>
+ <token>without</token>
+<token>failure</token>
+<token>we</token>
+<token>cannot</token>
+<token>able</token>
+<token>to</token>
+<token>achieve</token>
+ </pattern>
+<short>1216</short>
+<example type='incorrect'>without failure we <marker>cannot able to</marker> achieve</example>
+</rule>
+<rule id="1217" name="1217">
+ <pattern>
+ <token>work</token>
+<token>while</token>
+<token>comparing</token>
+<token>with</token>
+<token>our</token>
+<token>first</token>
+<token>time</token>
+ </pattern>
+<short>1217</short>
+<example type='incorrect'>work <marker>while comparing</marker> with our first time</example>
+</rule>
+<rule id="1218" name="1218">
+ <pattern>
+ <token>failure</token>
+<token>person</token>
+ </pattern>
+<short>1218</short>
+<example type='incorrect'><marker>failure person</marker></example>
+</rule>
+<rule id="1219" name="1219">
+ <pattern>
+ <token>We</token>
+<token>are</token>
+<token>all</token>
+<token>know</token>
+ </pattern>
+<short>1219</short>
+<example type='incorrect'><marker>We are all know</marker></example>
+</rule>
+<rule id="1220" name="1220">
+ <pattern>
+ <token>scientist</token>
+<token>Edison</token>
+<token>he</token>
+<token>was</token>
+<token>discovered</token>
+<token>light</token>
+<token>to</token>
+<token>the</token>
+<token>world</token>
+ </pattern>
+<short>1220</short>
+<example type='incorrect'>scientist Edison <marker>he was discovered</marker> light to the world</example>
+</rule>
+<rule id="1221" name="1221">
+ <pattern>
+ <token>one</token>
+<token>success</token>
+<token>is</token>
+<token>not</token>
+<token>give</token>
+<token>happy</token>
+<token>but</token>
+<token>ten</token>
+<token>failure</token>
+<token>gives</token>
+<token>experience</token>
+ </pattern>
+<short>1221</short>
+<example type='incorrect'>one success <marker>is not give happy</marker> but ten failure gives experience</example>
+</rule>
+<rule id="1222" name="1222">
+ <pattern>
+ <token>Success</token>
+<token>become</token>
+<token>happy</token>
+<token>when</token>
+<token>we</token>
+<token>put</token>
+<token>more</token>
+<token>hard</token>
+<token>work</token>
+ </pattern>
+<short>1222</short>
+<example type='incorrect'><marker>Success become happy</marker> when we put more hard work</example>
+</rule>
+<rule id="1223" name="1223">
+ <pattern>
+ <token>we</token>
+<token>can</token>
+<token>take</token>
+<token>another</token>
+<token>one</token>
+<token>chance</token>
+<token>for</token>
+<token>the</token>
+<token>success</token>
+ </pattern>
+<short>1223</short>
+<example type='incorrect'>we can take <marker>another one chance</marker> for the success</example>
+</rule>
+<rule id="1224" name="1224">
+ <pattern>
+ <token>much</token>
+<token>more</token>
+<token>on</token>
+<token>that</token>
+<token>failure</token>
+ </pattern>
+<short>1224</short>
+<example type='incorrect'>much <marker>more on that</marker> failure</example>
+</rule>
+<rule id="1225" name="1225">
+ <pattern>
+ <token>.</token>
+<token>"</token>
+<token>Failure</token>
+<token>is</token>
+<token>the</token>
+<token>stepping</token>
+<token>stone</token>
+<token>to</token>
+<token>success"</token>
+ </pattern>
+<short>1225</short>
+<example type='incorrect'>. <marker>" Failure</marker> is the stepping stone to success"</example>
+</rule>
+<rule id="1226" name="1226">
+ <pattern>
+ <token>The</token>
+<token>number</token>
+<token>of</token>
+<token>failure</token>
+<token>attempts</token>
+<token>will</token>
+<token>teach</token>
+ </pattern>
+<short>1226</short>
+<example type='incorrect'>The number of <marker>failure attempts</marker> will teach</example>
+</rule>
+<rule id="1227" name="1227">
+ <pattern>
+ <token>failures</token>
+<token>teach</token>
+<token>us</token>
+<token>to</token>
+<token>do</token>
+<token>well</token>
+<token>in</token>
+<token>next</token>
+<token>time</token>
+<token>and</token>
+<token>gives</token>
+<token>experience</token>
+<token>to</token>
+<token>us</token>
+ </pattern>
+<short>1227</short>
+<example type='incorrect'>failures teach us to do <marker>well in next time</marker> and gives experience to us</example>
+</rule>
+<rule id="1228" name="1228">
+ <pattern>
+ <token>The</token>
+<token>great</token>
+<token>scientists</token>
+<token>in</token>
+<token>all</token>
+<token>over</token>
+<token>the</token>
+<token>world</token>
+ </pattern>
+<short>1228</short>
+<example type='incorrect'>The great <marker>scientists in all</marker> over the world</example>
+</rule>
+<rule id="1229" name="1229">
+ <pattern>
+ <token>Each</token>
+<token>and</token>
+<token>every</token>
+<token>successful</token>
+<token>definitely</token>
+<token>faced</token>
+<token>failures</token>
+<token>in</token>
+<token>their</token>
+<token>life</token>
+ </pattern>
+<short>1229</short>
+<example type='incorrect'>Each and every <marker>successful definitely faced</marker> failures in their life</example>
+</rule>
+<rule id="1230" name="1230">
+ <pattern>
+ <token>they</token>
+<token>were</token>
+<token>learnt</token>
+<token>the</token>
+<token>method</token>
+<token>of</token>
+<token>approaching</token>
+<token>by</token>
+<token>that</token>
+<token>failure</token>
+<token>only</token>
+ </pattern>
+<short>1230</short>
+<example type='incorrect'><marker>they were learnt</marker> the method of approaching by that failure only</example>
+</rule>
+<rule id="1231" name="1231">
+ <pattern>
+ <token>it</token>
+<token>is</token>
+<token>only</token>
+<token>by</token>
+<token>if</token>
+<token>the</token>
+<token>people</token>
+<token>will</token>
+<token>utilize</token>
+ </pattern>
+<short>1231</short>
+<example type='incorrect'>it is <marker>only by if</marker> the people will utilize</example>
+</rule>
+<rule id="1232" name="1232">
+ <pattern>
+ <token>when</token>
+<token>it</token>
+<token>they</token>
+ </pattern>
+<short>1232</short>
+<example type='incorrect'><marker>when it they</marker></example>
+</rule>
+<rule id="1233" name="1233">
+ <pattern>
+ <token>has</token>
+<token>to</token>
+<token>avoid</token>
+<token>the</token>
+<token>mistakes</token>
+<token>what</token>
+<token>they</token>
+<token>done</token>
+<token>in</token>
+<token>that</token>
+<token>exam</token>
+ </pattern>
+<short>1233</short>
+<example type='incorrect'>has to avoid the mistakes what <marker>they done</marker> in that exam</example>
+</rule>
+<rule id="1234" name="1234">
+ <pattern>
+ <token>try</token>
+<token>to</token>
+<token>catch</token>
+<token>the</token>
+<token>ball</token>
+<token>to</token>
+<token>out</token>
+<token>of</token>
+<token>the</token>
+<token>bats</token>
+<token>man</token>
+ </pattern>
+<short>1234</short>
+<example type='incorrect'>try to catch the ball to <marker>out of</marker> the bats man</example>
+</rule>
+<rule id="1235" name="1235">
+ <pattern>
+ <token>bats</token>
+<token>man</token>
+<token>who</token>
+<token>is</token>
+<token>play</token>
+<token>at</token>
+<token>present</token>
+<token>time</token>
+ </pattern>
+<short>1235</short>
+<example type='incorrect'>bats man <marker>who is play</marker> at present time</example>
+</rule>
+<rule id="1236" name="1236">
+ <pattern>
+ <token>some</token>
+<token>time</token>
+<token>fielders</token>
+<token>are</token>
+<token>missed</token>
+<token>the</token>
+<token>ball</token>
+ </pattern>
+<short>1236</short>
+<example type='incorrect'>some time fielders <marker>are missed</marker> the ball</example>
+</rule>
+<rule id="1237" name="1237">
+ <pattern>
+ <token>the</token>
+<token>success</token>
+<token>people</token>
+ </pattern>
+<short>1237</short>
+<example type='incorrect'>the <marker>success people</marker></example>
+</rule>
+<rule id="1238" name="1238">
+ <pattern>
+ <token>the</token>
+<token>failure</token>
+<token>only</token>
+<token>knows</token>
+<token>the</token>
+<token>all</token>
+<token>the</token>
+<token>problems</token>
+ </pattern>
+<short>1238</short>
+<example type='incorrect'>the failure only <marker>knows the all</marker> the problems</example>
+</rule>
+<rule id="1239" name="1239">
+ <pattern>
+ <token>that</token>
+<token>among</token>
+<token>which</token>
+<token>would</token>
+ </pattern>
+<short>1239</short>
+<example type='incorrect'><marker>that among which would</marker></example>
+</rule>
+<rule id="1240" name="1240">
+ <pattern>
+ <token>get</token>
+<token>succeed</token>
+ </pattern>
+<short>1240</short>
+<example type='incorrect'><marker>get succeed</marker></example>
+</rule>
+<rule id="1241" name="1241">
+ <pattern>
+ <token>unable</token>
+<token>save</token>
+ </pattern>
+<short>1241</short>
+<example type='incorrect'><marker>unable save</marker></example>
+</rule>
+<rule id="1242" name="1242">
+ <pattern>
+ <token>the</token>
+<token>ant</token>
+<token>is</token>
+<token>moves</token>
+ </pattern>
+<short>1242</short>
+<example type='incorrect'>the ant <marker>is moves</marker></example>
+</rule>
+<rule id="1243" name="1243">
+ <pattern>
+ <token>then</token>
+<token>if</token>
+ </pattern>
+<short>1243</short>
+<example type='incorrect'><marker>then if</marker></example>
+</rule>
+<rule id="1244" name="1244">
+ <pattern>
+ <token>it</token>
+<token>is</token>
+<token>put</token>
+ </pattern>
+<short>1244</short>
+<example type='incorrect'><marker>it is put</marker></example>
+</rule>
+<rule id="1245" name="1245">
+ <pattern>
+ <token>we</token>
+<token>should</token>
+<token>be</token>
+<token>keep</token>
+<token>on</token>
+ </pattern>
+<short>1245</short>
+<example type='incorrect'>we should <marker>be</marker> keep on</example>
+</rule>
+<rule id="1246" name="1246">
+ <pattern>
+ <token>so</token>
+<token>people</token>
+<token>takes</token>
+<token>more</token>
+ </pattern>
+<short>1246</short>
+<example type='incorrect'>so people <marker>takes</marker> more</example>
+</rule>
+<rule id="1247" name="1247">
+ <pattern>
+ <token>The</token>
+<token>environment</token>
+<token>are</token>
+<token>to</token>
+<token>be</token>
+ </pattern>
+<short>1247</short>
+<example type='incorrect'>The environment <marker>are to</marker> be </example>
+</rule>
+<rule id="1248" name="1248">
+ <pattern>
+ <token>the</token>
+<token>china</token>
+ </pattern>
+<short>1248</short>
+<example type='incorrect'>the <marker>china</marker></example>
+</rule>
+<rule id="1249" name="1249">
+ <pattern>
+ <token>single</token>
+<token>children</token>
+ </pattern>
+<short>1249</short>
+<example type='incorrect'><marker>single children</marker></example>
+</rule>
+<rule id="1250" name="1250">
+ <pattern>
+ <token>On</token>
+<token>interview</token>
+<token>morning</token>
+<token>nearly</token>
+<token>I</token>
+<token>spend</token>
+<token>thirty</token>
+ </pattern>
+<short>1250</short>
+<example type='incorrect'>On interview <marker>morning nearly I spend</marker> thirty</example>
+</rule>
+<rule id="1251" name="1251">
+ <pattern>
+ <token>Before</token>
+<token>attending</token>
+<token>interview</token>
+<token>I</token>
+<token>tensed</token>
+<token>more</token>
+ </pattern>
+<short>1251</short>
+<example type='incorrect'>Before attending <marker>interview I tensed</marker> more</example>
+</rule>
+<rule id="1252" name="1252">
+ <pattern>
+ <token>very</token>
+<token>simple</token>
+<token>which</token>
+<token>is</token>
+<token>already</token>
+<token>asked</token>
+<token>for</token>
+<token>me</token>
+ </pattern>
+<short>1252</short>
+<example type='incorrect'>very simple <marker>which is already asked</marker> for me</example>
+</rule>
+<rule id="1253" name="1253">
+ <pattern>
+ <token>That</token>
+<token>makes</token>
+<token>very</token>
+<token>tensed</token>
+<token>for</token>
+<token>me</token>
+ </pattern>
+<short>1253</short>
+<example type='incorrect'>That <marker>makes very tensed for me</marker></example>
+</rule>
+<rule id="1254" name="1254">
+ <pattern>
+ <token>In</token>
+<token>the</token>
+<token>aptitude</token>
+<token>round</token>
+<token>has</token>
+<token>no</token>
+<token>negative</token>
+<token>marks</token>
+ </pattern>
+<short>1254</short>
+<example type='incorrect'>In the aptitude round <marker>has no</marker> negative marks</example>
+</rule>
+<rule id="1255" name="1255">
+ <pattern>
+ <token>That</token>
+<token>process</token>
+<token>is</token>
+<token>test</token>
+<token>the</token>
+<token>candidate</token>
+<token>communication</token>
+<token>skill</token>
+ </pattern>
+<short>1255</short>
+<example type='incorrect'><marker>That process is test</marker> the candidate communication skill</example>
+</rule>
+<rule id="1256" name="1256">
+ <pattern>
+ <token>I</token>
+<token>was</token>
+<token>successfully</token>
+<token>complete</token>
+<token>the</token>
+<token>that</token>
+<token>part</token>
+ </pattern>
+<short>1256</short>
+<example type='incorrect'><marker>I was successfully complete</marker> the that part</example>
+</rule>
+<rule id="1257" name="1257">
+ <pattern>
+ <token>they</token>
+<token>are</token>
+<token>give</token>
+<token>to</token>
+<token>me</token>
+<token>job</token>
+<token>offer</token>
+ </pattern>
+<short>1257</short>
+<example type='incorrect'><marker>they are give to me job offer</marker></example>
+</rule>
+<rule id="1258" name="1258">
+ <pattern>
+ <token>makes</token>
+<token>you</token>
+<token>all</token>
+<token>them</token>
+<token>happy</token>
+ </pattern>
+<short>1258</short>
+<example type='incorrect'><marker>makes you all them happy</marker></example>
+</rule>
+<rule id="1259" name="1259">
+ <pattern>
+ <token>At</token>
+<token>first,</token>
+<token>We</token>
+<token>need</token>
+<token>to</token>
+<token>clear</token>
+ </pattern>
+<short>1259</short>
+<example type='incorrect'>At first, <marker>We</marker> need to clear</example>
+</rule>
+<rule id="1260" name="1260">
+ <pattern>
+ <token>test,</token>
+<token>Allocate</token>
+<token>time</token>
+<token>is</token>
+<token>80</token>
+<token>min</token>
+ </pattern>
+<short>1260</short>
+<example type='incorrect'>test, <marker>Allocate</marker> time is 80 min</example>
+</rule>
+<rule id="1261" name="1261">
+ <pattern>
+ <token>We</token>
+<token>need</token>
+<token>attend</token>
+<token>all</token>
+<token>the</token>
+<token>question</token>
+ </pattern>
+<short>1261</short>
+<example type='incorrect'>We <marker>need attend all the question</marker></example>
+</rule>
+<rule id="1262" name="1262">
+ <pattern>
+ <token>by</token>
+<token>wake</token>
+<token>up</token>
+<token>at</token>
+<token>morning</token>
+<token>early</token>
+ </pattern>
+<short>1262</short>
+<example type='incorrect'><marker>by wake up at morning early</marker></example>
+</rule>
+<rule id="1263" name="1263">
+ <pattern>
+ <token>I</token>
+<token>was</token>
+<token>cleared</token>
+<token>that</token>
+<token>test</token>
+ </pattern>
+<short>1263</short>
+<example type='incorrect'><marker>I was cleared</marker> that test</example>
+</rule>
+<rule id="1264" name="1264">
+ <pattern>
+ <token>the</token>
+<token>test</token>
+<token>has</token>
+<token>a</token>
+<token>tensed</token>
+ </pattern>
+<short>1264</short>
+<example type='incorrect'><marker>the test has a tensed</marker></example>
+</rule>
+<rule id="1265" name="1265">
+ <pattern>
+ <token>natural</token>
+<token>resources</token>
+<token>-and</token>
+ </pattern>
+<short>1265</short>
+<example type='incorrect'>natural resources <marker>-and</marker></example>
+</rule>
+<rule id="1266" name="1266">
+ <pattern>
+ <token>get</token>
+<token>succeed</token>
+ </pattern>
+<short>1266</short>
+<example type='incorrect'><marker>get succeed</marker></example>
+</rule>
+<rule id="1267" name="1267">
+ <pattern>
+ <token>and</token>
+<token>it</token>
+<token>you</token>
+<token>have</token>
+<token>any</token>
+<token>clarifications</token>
+<token>regarding</token>
+ </pattern>
+<short>1267</short>
+<example type='incorrect'><marker>and it you have</marker> any clarifications regarding</example>
+</rule>
+<rule id="1268" name="1268">
+ <pattern>
+ <token>field</token>
+<token>first</token>
+<token>pager</token>
+<token>is</token>
+<token>invented</token>
+<token>for</token>
+<token>communication</token>
+ </pattern>
+<short>1268</short>
+<example type='incorrect'>field first <marker>pager is invented</marker> for communication</example>
+</rule>
+<rule id="1269" name="1269">
+ <pattern>
+ <token>A</token>
+<token>person</token>
+<token>will</token>
+<token>get</token>
+<token>expired</token>
+<token>if</token>
+<token>he</token>
+ </pattern>
+<short>1269</short>
+<example type='incorrect'>A person will <marker>get expired if</marker> he</example>
+</rule>
+<rule id="1270" name="1270">
+ <pattern>
+ <token>that</token>
+<token>in</token>
+<token>everyone</token>
+<token>life</token>
+ </pattern>
+<short>1270</short>
+<example type='incorrect'>that in <marker>everyone life</marker></example>
+</rule>
+<rule id="1271" name="1271">
+ <pattern>
+ <token>living</token>
+<token>under</token>
+<token>the</token>
+<token>fastest</token>
+<token>world</token>
+ </pattern>
+<short>1271</short>
+<example type='incorrect'><marker>living under the</marker> fastest world</example>
+</rule>
+<rule id="1272" name="1272">
+ <pattern>
+ <token>the</token>
+<token>qualified</token>
+<token>one</token>
+<token>person</token>
+<token>so</token>
+ </pattern>
+<short>1272</short>
+<example type='incorrect'>the <marker>qualified one person</marker> so</example>
+</rule>
+<rule id="1273" name="1273">
+ <pattern>
+ <token>to</token>
+<token>the</token>
+<token>corporate</token>
+<token>people</token>
+<token>attitude</token>
+<token>then</token>
+<token>only</token>
+<token>we</token>
+<token>will</token>
+<token>work</token>
+ </pattern>
+<short>1273</short>
+<example type='incorrect'>to the <marker>corporate people attitude</marker> then only we will work </example>
+</rule>
+<rule id="1274" name="1274">
+ <pattern>
+ <token>the</token>
+<token>country</token>
+<token>them</token>
+<token>only</token>
+<token>we</token>
+<token>will</token>
+<token>survey</token>
+ </pattern>
+<short>1274</short>
+<example type='incorrect'>the <marker>country them only</marker> we will survey</example>
+</rule>
+<rule id="1275" name="1275">
+ <pattern>
+ <token>daily</token>
+<token>attitude</token>
+<token>and</token>
+<token>t</token>
+<token>adapt</token>
+<token>in</token>
+<token>the</token>
+<token>new</token>
+<token>situation</token>
+ </pattern>
+<short>1275</short>
+<example type='incorrect'>daily attitude <marker>and t adapt</marker> in the new situation</example>
+</rule>
+<rule id="1276" name="1276">
+ <pattern>
+ <token>Life</token>
+<token>is</token>
+<token>beautiful</token>
+<token>one</token>
+ </pattern>
+<short>1276</short>
+<example type='incorrect'>Life is <marker>beautiful one</marker></example>
+</rule>
+<rule id="1277" name="1277">
+ <pattern>
+ <token>cannot</token>
+<token>able</token>
+<token>to</token>
+ </pattern>
+<short>1277</short>
+<example type='incorrect'><marker>cannot able to</marker></example>
+</rule>
+<rule id="1278" name="1278">
+ <pattern>
+ <token>every</token>
+<token>minute</token>
+<token>is</token>
+<token>count</token>
+<token>in</token>
+<token>our</token>
+<token>life</token>
+ </pattern>
+<short>1278</short>
+<example type='incorrect'><marker>every minute is count</marker> in our life</example>
+</rule>
+<rule id="1279" name="1279">
+ <pattern>
+ <token>which</token>
+<token>cannot</token>
+<token>able</token>
+<token>predict</token>
+ </pattern>
+<short>1279</short>
+<example type='incorrect'><marker>which cannot able predict</marker></example>
+</rule>
+<rule id="1280" name="1280">
+ <pattern>
+ <token>change</token>
+<token>phenomenon</token>
+<token>alone</token>
+<token>cannot</token>
+<token>be</token>
+ </pattern>
+<short>1280</short>
+<example type='incorrect'>change <marker>phenomenon alone cannot be</marker></example>
+</rule>
+<rule id="1281" name="1281">
+ <pattern>
+ <token>leisure</token>
+<token>time</token>
+<token>in</token>
+<token>beach</token>
+<token>for</token>
+<token>relaxation</token>
+ </pattern>
+<short>1281</short>
+<example type='incorrect'>leisure <marker>time in beach</marker> for relaxation</example>
+</rule>
+<rule id="1282" name="1282">
+ <pattern>
+ <token>play</token>
+<token>in</token>
+<token>the</token>
+<token>beach</token>
+ </pattern>
+<short>1282</short>
+<example type='incorrect'><marker>play in the beach</marker></example>
+</rule>
+<rule id="1283" name="1283">
+ <pattern>
+ <token>due</token>
+<token>to</token>
+<token>producing</token>
+<token>wasted</token>
+ </pattern>
+<short>1283</short>
+<example type='incorrect'>due to <marker>producing wasted</marker></example>
+</rule>
+<rule id="1284" name="1284">
+ <pattern>
+ <token>wastes</token>
+<token>like</token>
+<token>Plastic</token>
+<token>and</token>
+<token>non</token>
+<token>degradable</token>
+ </pattern>
+<short>1284</short>
+<example type='incorrect'>wastes like <marker>Plastic</marker> and non degradable</example>
+</rule>
+<rule id="1285" name="1285">
+ <pattern>
+ <token>problems</token>
+<token>are</token>
+<token>facing</token>
+<token>due</token>
+<token>to</token>
+<token>the</token>
+<token>workers</token>
+ </pattern>
+<short>1285</short>
+<example type='incorrect'><marker>problems are facing</marker> due to the workers</example>
+</rule>
+<rule id="1286" name="1286">
+ <pattern>
+ <token>yet</token>
+<token>to</token>
+<token>be</token>
+<token>continuing</token>
+<token>process</token>
+ </pattern>
+<short>1286</short>
+<example type='incorrect'><marker>yet to be continuing</marker> process</example>
+</rule>
+<rule id="1287" name="1287">
+ <pattern>
+ <token>nearby</token>
+<token>towards</token>
+<token>it</token>
+ </pattern>
+<short>1287</short>
+<example type='incorrect'><marker>nearby towards it</marker></example>
+</rule>
+<rule id="1288" name="1288">
+ <pattern>
+ <token>our</token>
+<token>society</token>
+<token>were</token>
+<token>being</token>
+<token>affected</token>
+<token>by</token>
+<token>some</token>
+<token>diseases</token>
+ </pattern>
+<short>1288</short>
+<example type='incorrect'>our society <marker>were being affected</marker> by some diseases</example>
+</rule>
+<rule id="1289" name="1289">
+ <pattern>
+ <token>towards</token>
+<token>to</token>
+<token>the</token>
+<token>people</token>
+<token>lived</token>
+<token>in</token>
+<token>society</token>
+ </pattern>
+<short>1289</short>
+<example type='incorrect'>towards to the <marker>people lived in society</marker></example>
+</rule>
+<rule id="1290" name="1290">
+ <pattern>
+ <token>mainly</token>
+<token>in</token>
+<token>heart</token>
+<token>patients</token>
+<token>some</token>
+<token>may</token>
+<token>cause</token>
+<token>serious</token>
+ </pattern>
+<short>1290</short>
+<example type='incorrect'><marker>mainly in heart</marker> patients some may cause serious</example>
+</rule>
+<rule id="1291" name="1291">
+ <pattern>
+ <token>This</token>
+<token>may</token>
+<token>affect</token>
+<token>the</token>
+<token>students</token>
+<token>studies</token>
+ </pattern>
+<short>1291</short>
+<example type='incorrect'>This may affect the <marker>students studies</marker></example>
+</rule>
+<rule id="1292" name="1292">
+ <pattern>
+ <token>make</token>
+<token>you</token>
+<token>know</token>
+ </pattern>
+<short>1292</short>
+<example type='incorrect'><marker>make you know</marker></example>
+</rule>
+<rule id="1293" name="1293">
+ <pattern>
+ <token>building</token>
+<token>is</token>
+<token>undergoing</token>
+<token>nearby</token>
+ </pattern>
+<short>1293</short>
+<example type='incorrect'>building is <marker>undergoing nearby</marker></example>
+</rule>
+<rule id="1294" name="1294">
+ <pattern>
+ <token>state</token>
+<token>of</token>
+<token>speechless</token>
+ </pattern>
+<short>1294</short>
+<example type='incorrect'><marker>state of speechless</marker></example>
+</rule>
+<rule id="1295" name="1295">
+ <pattern>
+ <token>are</token>
+<token>having</token>
+<token>a</token>
+<token>bad</token>
+<token>attitude</token>
+ </pattern>
+<short>1295</short>
+<example type='incorrect'><marker>are having a bad attitude</marker></example>
+</rule>
+<rule id="1296" name="1296">
+ <pattern>
+ <token>then</token>
+<token>they</token>
+<token>reform</token>
+<token>their</token>
+ </pattern>
+<short>1296</short>
+<example type='incorrect'><marker>then they reform their</marker></example>
+</rule>
+<rule id="1297" name="1297">
+ <pattern>
+ <token>then</token>
+<token>they</token>
+<token>are</token>
+<token>not</token>
+<token>able</token>
+<token>to</token>
+<token>enjoy</token>
+<token>in</token>
+<token>the</token>
+<token>jail</token>
+ </pattern>
+<short>1297</short>
+<example type='incorrect'><marker>then they are not able</marker> to enjoy in the jail</example>
+</rule>
+<rule id="1298" name="1298">
+ <pattern>
+ <token>then</token>
+<token>we</token>
+<token>do</token>
+<token>not</token>
+<token>need</token>
+<token>of</token>
+<token>labours</token>
+ </pattern>
+<short>1298</short>
+<example type='incorrect'>then <marker>we do not need of labours</marker></example>
+</rule>
+<rule id="1299" name="1299">
+ <pattern>
+ <token>look</token>
+<token>forward</token>
+<token>of</token>
+<token>the</token>
+<token>criminal</token>
+ </pattern>
+<short>1299</short>
+<example type='incorrect'><marker>look forward of the</marker> criminal</example>
+</rule>
+<rule id="1300" name="1300">
+ <pattern>
+ <token>years</token>
+<token>we</token>
+<token>can</token>
+<token>able</token>
+<token>to</token>
+<token>say</token>
+<token>them</token>
+ </pattern>
+<short>1300</short>
+<example type='incorrect'>years <marker>we can able to say them</marker></example>
+</rule>
+<rule id="1301" name="1301">
+ <pattern>
+ <token>and</token>
+<token>that</token>
+<token>has</token>
+<token>made</token>
+<token>me</token>
+<token>a</token>
+<token>man</token>
+ </pattern>
+<short>1301</short>
+<example type='incorrect'>and <marker>that has made</marker> me a man</example>
+</rule>
+<rule id="1302" name="1302">
+ <pattern>
+ <token>bring</token>
+<token>you</token>
+<token>in</token>
+<token>updated</token>
+<token>about</token>
+ </pattern>
+<short>1302</short>
+<example type='incorrect'><marker>bring you in updated about</marker></example>
+</rule>
+<rule id="1303" name="1303">
+ <pattern>
+ <token>personal</token>
+<token>comittments</token>
+<token>in</token>
+<token>working</token>
+<token>on</token>
+<token>the</token>
+<token>project</token>
+ </pattern>
+<short>1303</short>
+<example type='incorrect'>personal comittments <marker>in working on</marker> the project</example>
+</rule>
+<rule id="1304" name="1304">
+ <pattern>
+ <token>work</token>
+<token>expressed</token>
+<token>by</token>
+<token>you</token>
+<token>as</token>
+<token>much</token>
+<token>hard</token>
+<token>as</token>
+<token>you</token>
+<token>can</token>
+<token>to</token>
+<token>finish</token>
+<token>the</token>
+<token>project</token>
+<token>on</token>
+<token>time</token>
+ </pattern>
+<short>1304</short>
+<example type='incorrect'>work expressed by <marker>you as much hard as you can</marker> to finish the project on time</example>
+</rule>
+<rule id="1305" name="1305">
+ <pattern>
+ <token>lots</token>
+<token>of</token>
+<token>Children</token>
+<token>and</token>
+<token>old</token>
+<token>age</token>
+<token>peoples</token>
+ </pattern>
+<short>1305</short>
+<example type='incorrect'>lots of <marker>Children</marker> and old age peoples</example>
+</rule>
+<rule id="1306" name="1306">
+ <pattern>
+ <token>affecting</token>
+<token>by</token>
+<token>Noise</token>
+<token>Pollution</token>
+<token>that's</token>
+<token>the</token>
+<token>main</token>
+ </pattern>
+<short>1306</short>
+<example type='incorrect'>affecting by <marker>Noise Pollution</marker> that's the main</example>
+</rule>
+<rule id="1307" name="1307">
+ <pattern>
+ <token>My</token>
+<token>one</token>
+<token>and</token>
+<token>only</token>
+<token>hope</token>
+<token>final</token>
+<token>hope</token>
+ </pattern>
+<short>1307</short>
+<example type='incorrect'>My one and <marker>only hope final hope</marker></example>
+</rule>
+<rule id="1308" name="1308">
+ <pattern>
+ <token>I</token>
+<token>personally</token>
+<token>sending</token>
+<token>this</token>
+<token>mail</token>
+<token>to</token>
+ </pattern>
+<short>1308</short>
+<example type='incorrect'><marker>I personally</marker> sending this mail to</example>
+</rule>
+<rule id="1309" name="1309">
+ <pattern>
+ <token>are</token>
+<token>affecting</token>
+<token>by</token>
+<token>this</token>
+<token>problem</token>
+ </pattern>
+<short>1309</short>
+<example type='incorrect'>are <marker>affecting by</marker> this problem</example>
+</rule>
+<rule id="1310" name="1310">
+ <pattern>
+ <token>email</token>
+<token>in</token>
+<token>giving</token>
+<token>you</token>
+<token>complaint</token>
+<token>about</token>
+ </pattern>
+<short>1310</short>
+<example type='incorrect'>email <marker>in giving you</marker> complaint about</example>
+</rule>
+<rule id="1311" name="1311">
+ <pattern>
+ <token>there</token>
+<token>are</token>
+<token>so</token>
+<token>many</token>
+<token>small</token>
+<token>children</token>
+<token>are</token>
+<token>there</token>
+ </pattern>
+<short>1311</short>
+<example type='incorrect'>there are so many small children <marker>are there</marker></example>
+</rule>
+<rule id="1312" name="1312">
+ <pattern>
+ <token>at</token>
+<token>very</token>
+<token>fast</token>
+<token>with</token>
+<token>loud</token>
+<token>horns</token>
+ </pattern>
+<short>1312</short>
+<example type='incorrect'><marker>at very fast with loud horns</marker></example>
+</rule>
+<rule id="1313" name="1313">
+ <pattern>
+ <token>There</token>
+<token>are</token>
+<token>some</token>
+<token>bike</token>
+<token>riders</token>
+<token>are</token>
+<token>available</token>
+ </pattern>
+<short>1313</short>
+<example type='incorrect'>There are some bike riders <marker>are available</marker></example>
+</rule>
+<rule id="1314" name="1314">
+ <pattern>
+ <token>try</token>
+<token>to</token>
+<token>get</token>
+<token>champion</token>
+ </pattern>
+<short>1314</short>
+<example type='incorrect'><marker>try to get champion</marker></example>
+</rule>
+<rule id="1315" name="1315">
+ <pattern>
+ <token>only</token>
+<token>we</token>
+<token>facing</token>
+<token>the</token>
+<token>problems</token>
+ </pattern>
+<short>1315</short>
+<example type='incorrect'>only <marker>we facing</marker> the problems</example>
+</rule>
+<rule id="1316" name="1316">
+ <pattern>
+ <token>I</token>
+<token>can</token>
+<token>found</token>
+<token>some</token>
+<token>miscreants</token>
+ </pattern>
+<short>1316</short>
+<example type='incorrect'><marker>I can found some</marker> miscreants</example>
+</rule>
+<rule id="1317" name="1317">
+ <pattern>
+ <token>This</token>
+<token>problem</token>
+<token>regularly</token>
+<token>happen</token>
+<token>in</token>
+<token>every</token>
+<token>enening</token>
+ </pattern>
+<short>1317</short>
+<example type='incorrect'>This problem regularly <marker>happen in every</marker> enening</example>
+</rule>
+<rule id="1318" name="1318">
+ <pattern>
+ <token>them</token>
+<token>to</token>
+<token>riding</token>
+<token>bike</token>
+ </pattern>
+<short>1318</short>
+<example type='incorrect'><marker>them to riding bike</marker></example>
+</rule>
+<rule id="1319" name="1319">
+ <pattern>
+ <token>people</token>
+<token>are</token>
+<token>feel</token>
+<token>unsafe</token>
+ </pattern>
+<short>1319</short>
+<example type='incorrect'><marker>people are feel unsafe</marker></example>
+</rule>
+<rule id="1320" name="1320">
+ <pattern>
+ <token>they</token>
+<token>will</token>
+<token>no</token>
+<token>repeat</token>
+<token>this</token>
+ </pattern>
+<short>1320</short>
+<example type='incorrect'><marker>they will no repeat this</marker></example>
+</rule>
+<rule id="1321" name="1321">
+ <pattern>
+ <token>the</token>
+<token>park</token>
+<token>regularly</token>
+<token>will</token>
+<token>cross</token>
+<token>the</token>
+<token>road</token>
+<token>to</token>
+<token>reach</token>
+<token>the</token>
+<token>park</token>
+ </pattern>
+<short>1321</short>
+<example type='incorrect'>the park <marker>regularly will cross</marker> the road to reach the park</example>
+</rule>
+<rule id="1322" name="1322">
+ <pattern>
+ <token>the</token>
+<token>road</token>
+<token>may</token>
+<token>be</token>
+<token>hit</token>
+<token>by</token>
+<token>those</token>
+<token>vehicles</token>
+ </pattern>
+<short>1322</short>
+<example type='incorrect'>the road <marker>may be</marker> hit by those vehicles</example>
+</rule>
+<rule id="1323" name="1323">
+ <pattern>
+ <token>they</token>
+<token>will</token>
+<token>make</token>
+<token>damage</token>
+<token>to</token>
+<token>the</token>
+<token>people</token>
+ </pattern>
+<short>1323</short>
+<example type='incorrect'>they <marker>will make damage</marker> to the people</example>
+</rule>
+<rule id="1324" name="1324">
+ <pattern>
+ <token>that</token>
+<token>area</token>
+<token>gave</token>
+<token>complaint</token>
+<token>to</token>
+<token>me</token>
+ </pattern>
+<short>1324</short>
+<example type='incorrect'>that area gave <marker>complaint to me</marker></example>
+</rule>
+<rule id="1325" name="1325">
+ <pattern>
+ <token>sent</token>
+<token>to</token>
+<token>you</token>
+<token>at</token>
+<token>back</token>
+<token>side</token>
+ </pattern>
+<short>1325</short>
+<example type='incorrect'><marker>sent to you at back side</marker></example>
+</rule>
+<rule id="1326" name="1326">
+ <pattern>
+ <token>Already</token>
+<token>We</token>
+<token>have</token>
+<token>informed</token>
+<token>about</token>
+<token>this</token>
+<token>to</token>
+<token>the</token>
+<token>sub-inspector</token>
+ </pattern>
+<short>1326</short>
+<example type='incorrect'><marker>Already We have</marker> informed about this to the sub-inspector </example>
+</rule>
+<rule id="1327" name="1327">
+ <pattern>
+ <token>And</token>
+<token>also</token>
+<token>Many</token>
+<token>old</token>
+<token>aged</token>
+<token>people</token>
+ </pattern>
+<short>1327</short>
+<example type='incorrect'>And <marker>also Many old aged</marker> people </example>
+</rule>
+<rule id="1328" name="1328">
+ <pattern>
+ <token>about</token>
+<token>"</token>
+<token>wasting</token>
+<token>mineral</token>
+<token>resource</token>
+<token>is</token>
+<token>good</token>
+<token>or</token>
+<token>bad"</token>
+ </pattern>
+<short>1328</short>
+<example type='incorrect'>about <marker>" wasting</marker> mineral resource is good or bad"</example>
+</rule>
+<rule id="1329" name="1329">
+ <pattern>
+ <token>wasted</token>
+<token>when</token>
+<token>preparation</token>
+<token>of</token>
+<token>materials</token>
+ </pattern>
+<short>1329</short>
+<example type='incorrect'><marker>wasted when</marker> preparation of materials</example>
+</rule>
+<rule id="1330" name="1330">
+ <pattern>
+ <token>re</token>
+<token>use</token>
+<token>etc.,</token>
+<token>Recycling</token>
+<token>and</token>
+<token>re</token>
+<token>use</token>
+ </pattern>
+<short>1330</short>
+<example type='incorrect'>re use etc., <marker>Recycling</marker> and re use</example>
+</rule>
+<rule id="1331" name="1331">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>needed</token>
+<token>to</token>
+<token>send</token>
+<token>this</token>
+<token>mail</token>
+ </pattern>
+<short>1331</short>
+<example type='incorrect'><marker>I am needed to send</marker> this mail</example>
+</rule>
+<rule id="1332" name="1332">
+ <pattern>
+ <token>this</token>
+<token>mail</token>
+<token>for</token>
+<token>as</token>
+<token>my</token>
+<token>company</token>
+<token>relocating</token>
+ </pattern>
+<short>1332</short>
+<example type='incorrect'>this mail <marker>for as my company</marker> relocating</example>
+</rule>
+<rule id="1333" name="1333">
+ <pattern>
+ <token>old</token>
+<token>place</token>
+<token>not</token>
+<token>enough</token>
+<token>to</token>
+<token>us</token>
+ </pattern>
+<short>1333</short>
+<example type='incorrect'>old <marker>place not enough to us</marker></example>
+</rule>
+<rule id="1334" name="1334">
+ <pattern>
+ <token>we</token>
+<token>are</token>
+<token>changed</token>
+<token>our</token>
+<token>company</token>
+ </pattern>
+<short>1334</short>
+<example type='incorrect'>we <marker>are changed</marker> our company</example>
+</rule>
+<rule id="1335" name="1335">
+ <pattern>
+ <token>You</token>
+<token>as</token>
+<token>one</token>
+<token>our</token>
+<token>customer</token>
+ </pattern>
+<short>1335</short>
+<example type='incorrect'>You <marker>as one our customer</marker> </example>
+</rule>
+<rule id="1336" name="1336">
+ <pattern>
+ <token>here</token>
+<token>after</token>
+<token>it</token>
+<token>as</token>
+<token>the</token>
+<token>permanent</token>
+<token>address</token>
+<token>available</token>
+ </pattern>
+<short>1336</short>
+<example type='incorrect'>here <marker>after it as the permanent</marker> address available</example>
+</rule>
+<rule id="1337" name="1337">
+ <pattern>
+ <token>reach</token>
+<token>that</token>
+<token>through</token>
+<token>the</token>
+<token>mail</token>
+ </pattern>
+<short>1337</short>
+<example type='incorrect'><marker>reach that through the mail</marker></example>
+</rule>
+<rule id="1338" name="1338">
+ <pattern>
+ <token>in</token>
+<token>our</token>
+<token>office</token>
+<token>change</token>
+<token>in</token>
+<token>another</token>
+<token>place</token>
+ </pattern>
+<short>1338</short>
+<example type='incorrect'><marker>in our office change in another place</marker></example>
+</rule>
+<rule id="1339" name="1339">
+ <pattern>
+ <token>located</token>
+<token>on</token>
+<token>near</token>
+<token>outer</token>
+<token>ring</token>
+<token>road</token>
+ </pattern>
+<short>1339</short>
+<example type='incorrect'><marker>located on near</marker> outer ring road</example>
+</rule>
+<rule id="1340" name="1340">
+ <pattern>
+ <token>office</token>
+<token>placing</token>
+<token>on</token>
+<token>bigger</token>
+<token>office</token>
+<token>space</token>
+ </pattern>
+<short>1340</short>
+<example type='incorrect'><marker>office placing on</marker> bigger office space</example>
+</rule>
+<rule id="1341" name="1341">
+ <pattern>
+ <token>comfortable</token>
+<token>our</token>
+<token>convenient</token>
+<token>working</token>
+ </pattern>
+<short>1341</short>
+<example type='incorrect'><marker>comfortable our convenient working</marker></example>
+</rule>
+<rule id="1342" name="1342">
+ <pattern>
+ <token>shifting</token>
+<token>place</token>
+<token>there</token>
+<token>are</token>
+<token>some</token>
+<token>changes</token>
+ </pattern>
+<short>1342</short>
+<example type='incorrect'><marker>shifting place</marker> there are some changes</example>
+</rule>
+<rule id="1343" name="1343">
+ <pattern>
+ <token>in</token>
+<token>this</token>
+<token>road</token>
+ </pattern>
+<short>1343</short>
+<example type='incorrect'><marker>in this road</marker></example>
+</rule>
+<rule id="1344" name="1344">
+ <pattern>
+ <token>he</token>
+<token>has</token>
+<token>got</token>
+<token>admitted</token>
+ </pattern>
+<short>1344</short>
+<example type='incorrect'><marker>he has got</marker> admitted</example>
+</rule>
+<rule id="1345" name="1345">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>very</token>
+<token>regret</token>
+ </pattern>
+<short>1345</short>
+<example type='incorrect'><marker>I am very regret</marker></example>
+</rule>
+<rule id="1346" name="1346">
+ <pattern>
+ <token>time</token>
+<token>was</token>
+<token>troubled</token>
+<token>a</token>
+<token>lot</token>
+ </pattern>
+<short>1346</short>
+<example type='incorrect'><marker>time was troubled</marker> a lot</example>
+</rule>
+<rule id="1347" name="1347">
+ <pattern>
+ <token>problem</token>
+<token>of</token>
+<token>standing</token>
+<token>of</token>
+<token>waste</token>
+<token>water</token>
+<token>during</token>
+<token>rainy</token>
+<token>season</token>
+ </pattern>
+<short>1347</short>
+<example type='incorrect'>problem of <marker>standing of waste water</marker> during rainy season</example>
+</rule>
+<rule id="1348" name="1348">
+ <pattern>
+ <token>which</token>
+<token>causes</token>
+<token>lots</token>
+<token>of</token>
+<token>troubles</token>
+ </pattern>
+<short>1348</short>
+<example type='incorrect'>which <marker>causes lots of troubles</marker></example>
+</rule>
+<rule id="1349" name="1349">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>in</token>
+<token>behalf</token>
+<token>of</token>
+<token>our</token>
+<token>area</token>
+<token>complaining</token>
+ </pattern>
+<short>1349</short>
+<example type='incorrect'><marker>I am in behalf of our area complaining</marker></example>
+</rule>
+<rule id="1350" name="1350">
+ <pattern>
+ <token>The</token>
+<token>roads</token>
+<token>are</token>
+<token>highly</token>
+<token>damaged</token>
+<token>so</token>
+<token>many</token>
+<token>peoples</token>
+ </pattern>
+<short>1350</short>
+<example type='incorrect'>The roads are highly damaged <marker>so many peoples</marker></example>
+</rule>
+<rule id="1351" name="1351">
+ <pattern>
+ <token>so</token>
+<token>many</token>
+<token>peoples,</token>
+<token>Children,</token>
+<token>Old</token>
+<token>age</token>
+<token>peoples</token>
+<token>are</token>
+<token>affecting</token>
+<token>by</token>
+<token>this</token>
+<token>road</token>
+ </pattern>
+<short>1351</short>
+<example type='incorrect'>so many peoples, <marker>Children, Old age</marker> peoples are affecting by this road</example>
+</rule>
+<rule id="1352" name="1352">
+ <pattern>
+ <token>immediately,</token>
+<token>Our</token>
+<token>final</token>
+<token>hope</token>
+<token>is</token>
+<token>you</token>
+<token>and</token>
+<token>we</token>
+<token>all</token>
+<token>are</token>
+<token>trust</token>
+<token>in</token>
+<token>you</token>
+ </pattern>
+<short>1352</short>
+<example type='incorrect'>immediately, <marker>Our final</marker> hope is you and we all are trust in you</example>
+</rule>
+<rule id="1353" name="1353">
+ <pattern>
+ <token>email</token>
+<token>in</token>
+<token>giving</token>
+<token>you</token>
+<token>a</token>
+<token>complaint</token>
+ </pattern>
+<short>1353</short>
+<example type='incorrect'>email <marker>in giving you a complaint</marker></example>
+</rule>
+<rule id="1354" name="1354">
+ <pattern>
+ <token>school</token>
+<token>on</token>
+<token>time;</token>
+<token>So,</token>
+<token>it</token>
+<token>could</token>
+<token>cause</token>
+ </pattern>
+<short>1354</short>
+<example type='incorrect'>school on time; <marker>So</marker>, it could cause</example>
+</rule>
+<rule id="1355" name="1355">
+ <pattern>
+ <token>payment</token>
+<token>of</token>
+<token>due</token>
+ </pattern>
+<short>1355</short>
+<example type='incorrect'><marker>payment of due</marker></example>
+</rule>
+<rule id="1356" name="1356">
+ <pattern>
+ <token>there</token>
+<token>is</token>
+<token>a</token>
+<token>pending</token>
+<token>of</token>
+<token>payment</token>
+ </pattern>
+<short>1356</short>
+<example type='incorrect'><marker>there is a pending</marker> of payment</example>
+</rule>
+<rule id="1357" name="1357">
+ <pattern>
+ <token>I</token>
+<token>am</token>
+<token>delivered</token>
+<token>the</token>
+<token>products</token>
+ </pattern>
+<short>1357</short>
+<example type='incorrect'><marker>I am delivered the products</marker></example>
+</rule>
+<rule id="1358" name="1358">
+ <pattern>
+ <token>payment</token>
+<token>cannot</token>
+<token>received</token>
+<token>by</token>
+<token>the</token>
+<token>delivered</token>
+<token>products</token>
+ </pattern>
+<short>1358</short>
+<example type='incorrect'>payment <marker>cannot received by the delivered</marker> products</example>
+</rule>
+<rule id="1359" name="1359">
+ <pattern>
+ <token>you</token>
+<token>have</token>
+<token>to</token>
+<token>inform</token>
+<token>with</token>
+<token>us</token>
+<token>about</token>
+<token>the</token>
+ </pattern>
+<short>1359</short>
+<example type='incorrect'>you have to <marker>inform with us</marker> about the </example>
+</rule>
+<rule id="1360" name="1360">
+ <pattern>
+ <token>So</token>
+<token>i</token>
+<token>kindly</token>
+<token>request</token>
+<token>you</token>
+<token>to</token>
+<token>clear</token>
+ </pattern>
+<short>1360</short>
+<example type='incorrect'><marker>So i kindly</marker> request you to clear</example>
+</rule>
+<rule id="1361" name="1361">
+ <pattern>
+ <token>this</token>
+<token>mistake</token>
+<token>will</token>
+<token>not</token>
+<token>be</token>
+<token>done</token>
+<token>again</token>
+<token>in</token>
+<token>the</token>
+<token>future</token>
+ </pattern>
+<short>1361</short>
+<example type='incorrect'>this mistake <marker>will not be done again</marker> in the future</example>
+</rule>
+<rule id="1362" name="1362">
+ <pattern>
+ <token>my</token>
+<token>team</token>
+<token>members</token>
+<token>are</token>
+<token>not</token>
+<token>able</token>
+<token>to</token>
+<token>attend</token>
+<token>our</token>
+<token>meeting</token>
+ </pattern>
+<short>1362</short>
+<example type='incorrect'>my team <marker>members are not able to attend</marker> our meeting</example>
+</rule>
+<rule id="1363" name="1363">
+ <pattern>
+ <token>In</token>
+<token>India</token>
+<token>we</token>
+<token>should</token>
+<token>celebrate</token>
+<token>because</token>
+<token>Holi</token>
+<token>is</token>
+<token>national</token>
+<token>holidays</token>
+<token>in</token>
+<token>my</token>
+<token>country</token>
+ </pattern>
+<short>1363</short>
+<example type='incorrect'>In India <marker>we should celebrate because Holi</marker> is national holidays in my country</example>
+</rule>
+<rule id="1364" name="1364">
+ <pattern>
+ <token>service</token>
+<token>team</token>
+<token>not</token>
+<token>response</token>
+<token>to</token>
+<token>me</token>
+<token>for</token>
+<token>correct</token>
+ </pattern>
+<short>1364</short>
+<example type='incorrect'>service <marker>team not response to me</marker> for correct</example>
+</rule>
+<rule id="1365" name="1365">
+ <pattern>
+ <token>These</token>
+<token>issue</token>
+<token>is</token>
+<token>charge</token>
+<token>problem</token>
+ </pattern>
+<short>1365</short>
+<example type='incorrect'><marker>These issue is</marker> charge problem</example>
+</rule>
+<rule id="1366" name="1366">
+ <pattern>
+ <token>response</token>
+<token>to</token>
+<token>me</token>
+<token>for</token>
+<token>correct</token>
+<token>my</token>
+<token>phone</token>
+<token>issue</token>
+ </pattern>
+<short>1366</short>
+<example type='incorrect'>response to me <marker>for correct my phone issue</marker></example>
+</rule>
+<rule id="1367" name="1367">
+ <pattern>
+ <token>cooperating</token>
+<token>for</token>
+<token>the</token>
+<token>customer</token>
+ </pattern>
+<short>1367</short>
+<example type='incorrect'><marker>cooperating for</marker> the customer</example>
+</rule>
+<rule id="1368" name="1368">
+ <pattern>
+ <token>the</token>
+<token>company</token>
+<token>only</token>
+<token>check</token>
+<token>the</token>
+<token>issues</token>
+ </pattern>
+<short>1368</short>
+<example type='incorrect'><marker>the company only check</marker> the issues</example>
+</rule>
+<rule id="1369" name="1369">
+ <pattern>
+ <token>return</token>
+<token>they</token>
+<token>back</token>
+<token>to</token>
+<token>me</token>
+ </pattern>
+<short>1369</short>
+<example type='incorrect'><marker>return they back to me</marker></example>
+</rule>
+<rule id="1370" name="1370">
+ <pattern>
+ <token>The</token>
+<token>battery</token>
+<token>dried</token>
+<token>out</token>
+<token>easily</token>
+ </pattern>
+<short>1370</short>
+<example type='incorrect'>The <marker>battery dried out</marker> easily</example>
+</rule>
+<rule id="1371" name="1371">
+ <pattern>
+ <token>i</token>
+<token>am</token>
+<token>blindly</token>
+ </pattern>
+<short>1371</short>
+<example type='incorrect'><marker>i am</marker> blindly</example>
+</rule>
+<rule id="1372" name="1372">
+ <pattern>
+ <token>going</token>
+<token>to</token>
+<token>the</token>
+<token>out</token>
+<token>college</token>
+ </pattern>
+<short>1372</short>
+<example type='incorrect'><marker>going to the out college</marker></example>
+</rule>
+<rule id="1373" name="1373">
+ <pattern>
+ <token>students</token>
+<token>are</token>
+<token>easily</token>
+<token>clear</token>
+<token>the</token>
+<token>exam</token>
+ </pattern>
+<short>1373</short>
+<example type='incorrect'><marker>students are easily clear</marker> the exam</example>
+</rule>
+<rule id="1374" name="1374">
+ <pattern>
+ <token>we</token>
+<token>must</token>
+<token>want</token>
+<token>the</token>
+<token>coaching</token>
+<token>class</token>
+ </pattern>
+<short>1374</short>
+<example type='incorrect'><marker>we must want the</marker> coaching class</example>
+</rule>
+<rule id="1375" name="1375">
+ <pattern>
+ <token>ourself</token>
+<token>Otherwise,</token>
+<token>we</token>
+<token>cannot</token>
+ </pattern>
+<short>1375</short>
+<example type='incorrect'>ourself <marker>Otherwise</marker>, we cannot</example>
+</rule>
+<rule id="1376" name="1376">
+ <pattern>
+ <token>verified</token>
+<token>many</token>
+<token>multiple</token>
+<token>text</token>
+<token>books</token>
+ </pattern>
+<short>1376</short>
+<example type='incorrect'>verified <marker>many multiple text books</marker></example>
+</rule>
+<rule id="1377" name="1377">
+ <pattern>
+ <token>I</token>
+<token>achieve</token>
+<token>many</token>
+<token>things</token>
+<token>for</token>
+<token>my</token>
+<token>family</token>
+ </pattern>
+<short>1377</short>
+<example type='incorrect'>I <marker>achieve</marker> many things for my family</example>
+</rule>
+<rule id="1378" name="1378">
+ <pattern>
+ <token>people</token>
+<token>want</token>
+<token>read</token>
+<token>something</token>
+ </pattern>
+<short>1378</short>
+<example type='incorrect'>people <marker>want read</marker> something</example>
+</rule>
+<rule id="1379" name="1379">
+ <pattern>
+ <token>the</token>
+<token>people</token>
+<token>can't</token>
+<token>do</token>
+<token>any</token>
+<token>works</token>
+<token>without</token>
+<token>alone</token>
+ </pattern>
+<short>1379</short>
+<example type='incorrect'>the people <marker>can't do any works without alone</marker></example>
+</rule>
+<rule id="1380" name="1380">
+ <pattern>
+ <token>future</token>
+<token>should</token>
+<token>a</token>
+<token>become</token>
+<token>beautiful</token>
+<token>for</token>
+<token>us</token>
+ </pattern>
+<short>1380</short>
+<example type='incorrect'>future <marker>should a become</marker> beautiful for us</example>
+</rule>
+<rule name="taj mahal" id="Taj Mahal">
+        <pattern>
+            <marker>
+                <token>Taj</token>
+                <token>Mahal</token>
+            </marker>
+        </pattern>
+        <disambig action="ignore_spelling"/>
+</rule>
+
+	</category>
+	
+</rules>

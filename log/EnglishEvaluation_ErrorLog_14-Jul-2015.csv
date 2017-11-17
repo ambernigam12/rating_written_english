@@ -1,0 +1,33 @@
+"Exception occurred while sending mail.$$$Couldn't connect to host, port: localhost, 25; timeout -1",MailStats,LoggingFunctions,10-04-2015 23:59:22
+"Unable to rename the error log file.",MailStats,LoggingFunctions,10-04-2015 23:59:51
+"Exception occurred while sending mail.$$$Couldn't connect to host, port: localhost, 25; timeout -1",MailStats,LoggingFunctions,10-04-2015 23:59:52
+"Submission evaluation terminated as Language Tool threw an exception.
+com.microsoft.sqlserver.jdbc.SQLServerDriver",main,SubjectiveResponseEvaluationEngine,18-04-2015 18:55:27
+"Error occurred while getting Email Id for the owner.
+No suitable driver found for jdbc:sqlserver://localdatabase\SqlExpress;databasename=CoCubesTracking;",GetOwnerEmailId,HelperFunctions,18-04-2015 18:55:27
+"Submission evaluation terminated as Language Tool threw an exception.
+com.microsoft.sqlserver.jdbc.SQLServerDriver",main,SubjectiveResponseEvaluationEngine,18-04-2015 18:56:12
+"Error occurred while getting Email Id for the owner.
+No suitable driver found for jdbc:sqlserver://localdatabase\SqlExpress;databasename=CoCubesTracking;",GetOwnerEmailId,HelperFunctions,18-04-2015 18:56:12
+"Error occurred while blocking submissions for evaluation
+Java Runtime Environment (JRE) version 1.8 is not supported by this driver. Use the sqljdbc4.jar class library, which provides support for JDBC 4.0.",GetSubmissions,SubjectiveResponseEvaluationEngine,18-04-2015 18:58:27
+"Error occurred while blocking submissions for evaluation
+Java Runtime Environment (JRE) version 1.8 is not supported by this driver. Use the sqljdbc4.jar class library, which provides support for JDBC 4.0.",GetSubmissions,SubjectiveResponseEvaluationEngine,18-04-2015 18:58:57
+"Error occurred while blocking submissions for evaluation
+Java Runtime Environment (JRE) version 1.8 is not supported by this driver. Use the sqljdbc4.jar class library, which provides support for JDBC 4.0.",GetSubmissions,SubjectiveResponseEvaluationEngine,18-04-2015 18:59:27
+"Typing Speed formula returned negative value for Submission Id: 780
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:09:29
+"Typing Speed formula returned negative value for Submission Id: 969
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:09:33
+"Typing Speed formula returned negative value for Submission Id: 980
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:09:33
+"Typing Speed formula returned negative value for Submission Id: 989
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:09:33
+"Typing Speed formula returned negative value for Submission Id: 780
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:10:12
+"Typing Speed formula returned negative value for Submission Id: 969
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:10:16
+"Typing Speed formula returned negative value for Submission Id: 980
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:10:16
+"Typing Speed formula returned negative value for Submission Id: 989
+Using original formula of Typing Speed as of now.",SetTypingParameters,EnglishTypingResponseClass,02-07-2015 14:10:16
